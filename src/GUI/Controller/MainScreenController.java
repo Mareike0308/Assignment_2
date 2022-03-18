@@ -18,4 +18,6 @@ public class MainScreenController {
     }
 
 
+    public void logIn(ActionEvent actionEvent) {
+    }
 }
