@@ -68,9 +68,55 @@
             <Font name="Verdana" size="17.0" />
          </font>
       </Label>
-      <Label layoutX="4.0" layoutY="511.0" text="Hotline monday to friday 8 am- 5pm">
+      <Label layoutX="15.0" layoutY="487.0" text="Hotline monday to friday 8 am- 5pm">
          <font>
-            <Font name="Verdana" size="23.0" />
+            <Font name="Verdana" size="20.0" />
+         </font>
+      </Label>
+      <Label text="Label" />
+      <Label layoutX="19.0" layoutY="406.0" text="Esbjerg Festival ">
+         <font>
+            <Font name="Verdana" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="636.0" layoutY="406.0" text="Wheightlifting Competition">
+         <font>
+            <Font name="Verdana" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="428.0" layoutY="406.0" text="Ivaño on Tour">
+         <font>
+            <Font name="Verdana" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="217.0" layoutY="406.0" text="Exquisit Wine Tasting">
+         <font>
+            <Font name="Verdana" size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="17.0" layoutY="431.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="128.0" text="Tickets Kr. 300" textFill="#1c86ee">
+         <font>
+            <Font name="Verdana Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="213.0" layoutY="431.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="174.0" text="Tickets from Kr. 200" textFill="#1c86ee">
+         <font>
+            <Font name="Verdana Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="637.0" layoutY="432.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="166.0" text="Tickets from Kr. 150" textFill="#1c86ee">
+         <font>
+            <Font name="Verdana Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="418.0" layoutY="431.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="174.0" text="Tickets from Kr. 350" textFill="#1c86ee">
+         <font>
+            <Font name="Verdana Bold" size="13.0" />
+         </font>
+      </Button>
+      <Label layoutX="14.0" layoutY="512.0" text="+45 176 98600652">
+         <font>
+            <Font size="20.0" />
          </font>
       </Label>
    </children>
