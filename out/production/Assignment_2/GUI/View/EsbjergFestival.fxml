@@ -1,33 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.EsbjergFestivalController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #FFFFF;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.EsbjergFestivalController">
    <children>
-      <Label layoutX="14.0" layoutY="93.0" prefHeight="84.0" prefWidth="577.0" style="-fx-background-radius: 20; -fx-background-color: #F0F7F4;" />
-      <Label layoutX="39.0" layoutY="94.0" prefHeight="41.0" prefWidth="39.0" text="23">
+      <Label layoutX="11.0" layoutY="110.0" prefHeight="84.0" prefWidth="577.0" style="-fx-background-radius: 20; -fx-background-color: #CEBEBE;" />
+      <Label layoutX="50.0" layoutY="110.0" prefHeight="41.0" prefWidth="39.0" text="23" textFill="#d4099e">
          <font>
-            <Font name="Verdana Bold" size="18.0" />
+            <Font name="Calibri Bold" size="24.0" />
          </font>
       </Label>
-      <ToolBar prefHeight="75.0" prefWidth="600.0" style="-fx-background-color: #000000;" />
-      <Label layoutX="19.0" layoutY="125.0" text="Juni 2022">
+      <ToolBar prefHeight="75.0" prefWidth="600.0" style="-fx-background-color: #000000;">
+         <items>
+            <JFXButton fx:id="btn" style="-fx-background-color: #000000;" text="Esbjerg Festival" textFill="#fdfafa">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </JFXButton>
+         </items></ToolBar>
+      <Label layoutX="19.0" layoutY="142.0" text="Juni 2022">
          <font>
             <Font name="Verdana Bold" size="16.0" />
          </font>
       </Label>
-      <Label layoutX="27.0" layoutY="152.0" text="Ons 20:00">
+      <Label layoutX="31.0" layoutY="165.0" text="Ons 20:00">
          <font>
             <Font name="Verdana" size="12.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="169.0" layoutY="14.0" text="Esbjerg Festival" textFill="#fdfbfb">
+      <Label layoutX="152.0" layoutY="119.0" text="Esbjerg">
          <font>
-            <Font name="System Bold" size="36.0" />
+            <Font name="Verdana Bold" size="20.0" />
          </font>
       </Label>
+      <Label layoutX="152.0" layoutY="143.0" text="Esbjerg Festival 2022">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="152.0" layoutY="165.0" text="City Centre">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="67.0" fitWidth="64.0" layoutX="108.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../Bilder/jetzt.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="454.0" layoutY="125.0" text="Kr. 300" textFill="#d4099e">
+         <font>
+            <Font name="Verdana Bold" size="15.0" />
+         </font>
+      </Label>
+      <Button layoutX="430.0" layoutY="151.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="122.0" style="-fx-background-color: #d4099e;" text="Buy Tickets" textFill="WHITE">
+         <font>
+            <Font name="Verdana Bold" size="14.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="99.0" fitWidth="169.0" layoutX="-3.0" layoutY="300.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Vogel.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="119.0" fitWidth="122.0" layoutX="50.0" layoutY="293.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Unbenannt-1.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

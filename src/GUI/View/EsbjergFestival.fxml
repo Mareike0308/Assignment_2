@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.gluonhq.charm.glisten.layout.Layer?>
+<?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ToolBar?>
@@ -17,7 +17,14 @@
             <Font name="Calibri Bold" size="24.0" />
          </font>
       </Label>
-      <ToolBar prefHeight="75.0" prefWidth="600.0" style="-fx-background-color: #000000;" />
+      <ToolBar prefHeight="75.0" prefWidth="600.0" style="-fx-background-color: #000000;">
+         <items>
+            <JFXButton fx:id="btn" style="-fx-background-color: #000000;" text="Esbjerg Festival" textFill="#fdfafa">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </JFXButton>
+         </items></ToolBar>
       <Label layoutX="19.0" layoutY="142.0" text="Juni 2022">
          <font>
             <Font name="Verdana Bold" size="16.0" />
@@ -28,12 +35,6 @@
             <Font name="Verdana" size="12.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="169.0" layoutY="14.0" text="Esbjerg Festival" textFill="#fdfbfb">
-         <font>
-            <Font name="System Bold" size="36.0" />
-         </font>
-      </Label>
-      <Layer />
       <Label layoutX="152.0" layoutY="119.0" text="Esbjerg">
          <font>
             <Font name="Verdana Bold" size="20.0" />
@@ -66,12 +67,17 @@
       </Button>
       <ImageView fitHeight="99.0" fitWidth="169.0" layoutX="-3.0" layoutY="300.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../Bilder/Vogel.png" />
+            <Image url="@Images/Vogel.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="135.0" fitWidth="200.0" layoutX="137.0" layoutY="282.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="119.0" fitWidth="122.0" layoutX="50.0" layoutY="293.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../Unbenannt-1.png" />
+            <Image url="@Images/Unbenannt-1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="132.0" layoutX="129.0" layoutY="282.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Unbenannt-2.png" />
          </image>
       </ImageView>
    </children>

@@ -41,17 +41,20 @@
             <Image url="@Images/Bildschirmfoto%202022-03-21%20um%2016.35.05.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="316.0" fitWidth="187.0" layoutX="426.0" layoutY="141.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="316.0" fitWidth="187.0" layoutX="430.0" layoutY="141.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Images/Ivano%20on%20Tour.jpeg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="187.0" fitWidth="127.0" layoutX="597.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="256.0" fitWidth="180.0" layoutX="637.0" layoutY="142.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Mukiman.png" />
+         </image></ImageView>
       <ChoiceBox blendMode="SRC_ATOP" layoutX="133.0" layoutY="32.0" prefHeight="42.0" prefWidth="91.0" style="-fx-background-color: #202867#202867;" />
       <TextField layoutX="339.0" layoutY="32.0" prefHeight="42.0" prefWidth="395.0" promptText="search for artists and events" AnchorPane.topAnchor="32.0" />
       <ImageView fitHeight="85.0" fitWidth="52.0" layoutX="746.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@Images/Bildschirmfoto%202022-03-21%20um%2016.02.14.png" />
+            <Image url="@Images/Bildschirmfoto202022-03-21%20um%2016.02.14.png" />
          </image>
       </ImageView>
       <Label layoutX="105.0" layoutY="39.0" prefHeight="26.0" prefWidth="91.0" text="All Events" textFill="WHITE">
@@ -65,9 +68,55 @@
             <Font name="Verdana" size="17.0" />
          </font>
       </Label>
-      <Label layoutX="38.0" layoutY="493.0" text="Hotline monday to friday 8 am- 5pm">
+      <Label layoutX="15.0" layoutY="487.0" text="Hotline monday to friday 8 am- 5pm">
          <font>
-            <Font name="Verdana" size="23.0" />
+            <Font name="Verdana" size="20.0" />
+         </font>
+      </Label>
+      <Label text="Label" />
+      <Label layoutX="19.0" layoutY="406.0" text="Esbjerg Festival ">
+         <font>
+            <Font name="Verdana" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="636.0" layoutY="406.0" text="Wheightlifting Competition">
+         <font>
+            <Font name="Verdana" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="428.0" layoutY="406.0" text="Ivaño on Tour">
+         <font>
+            <Font name="Verdana" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="217.0" layoutY="406.0" text="Exquisit Wine Tasting">
+         <font>
+            <Font name="Verdana" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnEsbjerg" layoutX="17.0" layoutY="431.0" mnemonicParsing="false" onAction="#openEsbjergFestivalWindow" prefHeight="26.0" prefWidth="128.0" text="Tickets Kr. 300" textFill="#1c86ee">
+         <font>
+            <Font name="Verdana Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="213.0" layoutY="431.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="174.0" text="Tickets from Kr. 200" textFill="#1c86ee">
+         <font>
+            <Font name="Verdana Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="637.0" layoutY="432.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="166.0" text="Tickets from Kr. 150" textFill="#1c86ee">
+         <font>
+            <Font name="Verdana Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="418.0" layoutY="431.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="174.0" text="Tickets from Kr. 350" textFill="#1c86ee">
+         <font>
+            <Font name="Verdana Bold" size="13.0" />
+         </font>
+      </Button>
+      <Label layoutX="14.0" layoutY="512.0" text="+45 176 98600652">
+         <font>
+            <Font size="20.0" />
          </font>
       </Label>
    </children>

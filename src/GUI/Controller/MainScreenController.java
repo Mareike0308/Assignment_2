@@ -1,13 +1,19 @@
 package GUI.Controller;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 public class MainScreenController {
+
+    @FXML
+    private Button btnEsbjerg;
 
     public void logIn(ActionEvent actionEvent, Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(MainScreenController.class.getResource("LogInView.fxml"));
@@ -19,5 +25,15 @@ public class MainScreenController {
 
 
     public void logIn(ActionEvent actionEvent) {
+    }
+
+
+    public void openEsbjergFestivalWindow(ActionEvent actionEvent) throws IOException {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getClassLoader().getResource("GUI/View/EsbjergFestival.fxml"));
+        Parent root = loader.load();
+        Stage stage = new Stage();
+        stage.setScene(new Scene(root));
+        stage.show();
     }
 }
