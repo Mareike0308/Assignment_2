@@ -52,11 +52,6 @@
          </image></ImageView>
       <ChoiceBox blendMode="SRC_ATOP" layoutX="133.0" layoutY="32.0" prefHeight="42.0" prefWidth="91.0" style="-fx-background-color: #202867#202867;" />
       <TextField layoutX="339.0" layoutY="32.0" prefHeight="42.0" prefWidth="395.0" promptText="search for artists and events" AnchorPane.topAnchor="32.0" />
-      <ImageView fitHeight="85.0" fitWidth="52.0" layoutX="746.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@Images/Bildschirmfoto202022-03-21%20um%2016.02.14.png" />
-         </image>
-      </ImageView>
       <Label layoutX="105.0" layoutY="39.0" prefHeight="26.0" prefWidth="91.0" text="All Events" textFill="WHITE">
          <font>
             <Font name="Verdana" size="17.0" />
@@ -119,5 +114,10 @@
             <Font size="20.0" />
          </font>
       </Label>
+      <ImageView fitHeight="85.0" fitWidth="52.0" layoutX="755.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Bildschirmfoto%202022-03-21%20um%2016.02.14.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
