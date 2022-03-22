@@ -72,8 +72,6 @@ public class MainScreenController {
 
     @FXML
     public void initialize() {
-
-        //adds different Categories to the comboBox that the user can choose from
         boxChooseEvent.getItems().removeAll(boxChooseEvent.getItems());
         boxChooseEvent.getItems().addAll("Esbjerg Festival","Exquisite Wine Tasting", "Ivaño on Tour", "Weightlifting Competition");
         boxChooseEvent.getSelectionModel().select("All Events");
