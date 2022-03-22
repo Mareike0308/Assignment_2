@@ -13,17 +13,17 @@
    <children>
       <ImageView fitHeight="109.0" fitWidth="291.0" layoutX="544.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@Images/Bildschirmfoto%202022-03-21%20um%2016.02.31.png" />
+            <Image url="@Images/BlauerBalken.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="117.0" fitWidth="291.0" layoutX="264.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@Images/Bildschirmfoto%202022-03-21%20um%2016.02.31.png" />
+            <Image url="@Images/BlauerBalken.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="117.0" fitWidth="291.0" layoutX="-7.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="452.28318786621094" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="511.0" AnchorPane.topAnchor="-1.0">
          <image>
-            <Image url="@Images/Bildschirmfoto%202022-03-21%20um%2016.02.31.png" />
+            <Image url="@Images/BlauerBalken.png" />
          </image>
       </ImageView>
       <Button fx:id="logInBtn" contentDisplay="CENTER" ellipsisString="⚙" graphicTextGap="0.0" layoutX="672.0" layoutY="12.0" mnemonicParsing="false" onAction="#logIn" prefHeight="52.0" prefWidth="52.0" style="-fx-background-radius: 100;" text="⚙" visible="false" wrapText="true">
@@ -33,12 +33,12 @@
       </Button>
       <ImageView fitHeight="254.0" fitWidth="209.0" layoutX="19.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@Images/WhatsApp%20Image%202022-03-21%20at%204.13.39%20PM.jpeg" />
+            <Image url="@Images/EsbjergFestival.jpeg" />
          </image>
       </ImageView>
       <ImageView fitHeight="254.0" fitWidth="194.0" layoutX="217.0" layoutY="142.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@Images/Bildschirmfoto%202022-03-21%20um%2016.35.05.png" />
+            <Image url="@Images/WineTasting.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="316.0" fitWidth="187.0" layoutX="430.0" layoutY="141.0" pickOnBounds="true" preserveRatio="true">
@@ -84,7 +84,7 @@
             <Font name="Verdana" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="217.0" layoutY="406.0" text="Exquisit Wine Tasting">
+      <Label layoutX="217.0" layoutY="406.0" text="Exquisite Wine Tasting">
          <font>
             <Font name="Verdana" size="14.0" />
          </font>
@@ -116,7 +116,7 @@
       </Label>
       <ImageView fitHeight="85.0" fitWidth="52.0" layoutX="755.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@Images/Bildschirmfoto%202022-03-21%20um%2016.02.14.png" />
+            <Image url="@Images/Earnie.png" />
          </image>
       </ImageView>
    </children>
