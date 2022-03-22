@@ -94,12 +94,12 @@
             <Font name="Verdana Bold" size="13.0" />
          </font>
       </Button>
-      <Button layoutX="213.0" layoutY="431.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="174.0" text="Tickets from Kr. 200" textFill="#1c86ee">
+      <Button layoutX="213.0" layoutY="431.0" mnemonicParsing="false" onAction="#openWineWindow" prefHeight="26.0" prefWidth="174.0" text="Tickets from Kr. 200" textFill="#1c86ee">
          <font>
             <Font name="Verdana Bold" size="13.0" />
          </font>
       </Button>
-      <Button layoutX="637.0" layoutY="432.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="166.0" text="Tickets from Kr. 150" textFill="#1c86ee">
+      <Button layoutX="637.0" layoutY="432.0" mnemonicParsing="false" onAction="#openWeightWindow" prefHeight="26.0" prefWidth="166.0" text="Tickets from Kr. 150" textFill="#1c86ee">
          <font>
             <Font name="Verdana Bold" size="13.0" />
          </font>
@@ -114,7 +114,7 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <ImageView fitHeight="85.0" fitWidth="52.0" layoutX="755.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="85.0" fitWidth="52.0" layoutX="755.0" layoutY="26.0" onMouseClicked="#openLoginWindow" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Images/Earnie.png" />
          </image>
