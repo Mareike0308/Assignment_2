@@ -6,12 +6,17 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 public class MainScreenController {
+
+    public ChoiceBox boxChooseEvent;
+    public ChoiceBox boxChooseCity;
 
     @FXML
     private Button btnEsbjerg;
@@ -63,5 +68,18 @@ public class MainScreenController {
         Stage stage = new Stage();
         stage.setScene(new Scene(root));
         stage.show();
+    }
+
+    @FXML
+    public void initialize() {
+
+        //adds different Categories to the comboBox that the user can choose from
+        boxChooseEvent.getItems().removeAll(boxChooseEvent.getItems());
+        boxChooseEvent.getItems().addAll("Esbjerg Festival","Exquisite Wine Tasting", "Ivaño on Tour", "Weightlifting Competition");
+        boxChooseEvent.getSelectionModel().select("All Events");
+
+        boxChooseCity.getItems().removeAll(boxChooseCity.getItems());
+        boxChooseCity.getItems().addAll("Esbjerg","Copenhagen","Aalborg");
+        boxChooseCity.getSelectionModel().select("All Cities");
     }
 }
