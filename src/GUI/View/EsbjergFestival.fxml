@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #FFFFF;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.EsbjergFestivalController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.EsbjergFestivalController">
    <children>
       <Label layoutX="11.0" layoutY="110.0" prefHeight="84.0" prefWidth="577.0" style="-fx-background-radius: 20; -fx-background-color: #CEBEBE;" />
       <Label layoutX="50.0" layoutY="110.0" prefHeight="41.0" prefWidth="39.0" text="23" textFill="#d4099e">
