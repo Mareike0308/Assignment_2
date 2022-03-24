@@ -21,7 +21,7 @@ public class LogInController {
     }
 
     public void cancelLogin(ActionEvent actionEvent, Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(MainScreenController.class.getResource("MainScreenController.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(CoordinatorViewController.class.getResource("MainScreenController.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 567, 326);
         stage.setTitle("Sign In");
         stage.setScene(scene);
