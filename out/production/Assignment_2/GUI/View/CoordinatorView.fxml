@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="550.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.MainScreenController">
+<AnchorPane prefHeight="550.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.CoordinatorViewController">
    <children>
       <ImageView fitHeight="109.0" fitWidth="291.0" layoutX="544.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -33,7 +33,7 @@
       </Button>
       <ImageView fitHeight="254.0" fitWidth="209.0" layoutX="19.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@Images/WhatsApp%20Image%202022-03-21%20at%204.13.39%20PM.jpeg" />
+            <Image url="@Images/WhatsAppImage2022-03-21at4.13.39PM.jpeg" />
          </image>
       </ImageView>
       <ImageView fitHeight="254.0" fitWidth="194.0" layoutX="217.0" layoutY="142.0" pickOnBounds="true" preserveRatio="true">
@@ -50,27 +50,16 @@
          <image>
             <Image url="@Images/Mukiman.png" />
          </image></ImageView>
-      <ChoiceBox blendMode="SRC_ATOP" layoutX="133.0" layoutY="32.0" prefHeight="42.0" prefWidth="91.0" style="-fx-background-color: #202867#202867;" />
+      <ChoiceBox blendMode="SRC_ATOP" layoutX="229.0" layoutY="32.0" prefHeight="42.0" prefWidth="91.0" style="-fx-background-color: #202867#202867;" />
       <TextField layoutX="339.0" layoutY="32.0" prefHeight="42.0" prefWidth="395.0" promptText="search for artists and events" AnchorPane.topAnchor="32.0" />
       <ImageView fitHeight="85.0" fitWidth="52.0" layoutX="746.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Images/Bildschirmfoto202022-03-21%20um%2016.02.14.png" />
          </image>
       </ImageView>
-      <Label layoutX="105.0" layoutY="39.0" prefHeight="26.0" prefWidth="91.0" text="All Events" textFill="WHITE">
+      <Label layoutX="213.0" layoutY="40.0" prefHeight="26.0" prefWidth="91.0" text="All Events" textFill="WHITE">
          <font>
             <Font name="Verdana" size="17.0" />
-         </font>
-      </Label>
-      <ChoiceBox blendMode="SRC_ATOP" layoutX="248.0" layoutY="32.0" prefHeight="42.0" prefWidth="91.0" style="-fx-background-color: #202867#202867;" />
-      <Label layoutX="233.0" layoutY="40.0" prefHeight="26.0" prefWidth="116.0" text="All Cities" textFill="WHITE" AnchorPane.leftAnchor="233.0">
-         <font>
-            <Font name="Verdana" size="17.0" />
-         </font>
-      </Label>
-      <Label layoutX="15.0" layoutY="487.0" text="Hotline monday to friday 8 am- 5pm">
-         <font>
-            <Font name="Verdana" size="20.0" />
          </font>
       </Label>
       <Label text="Label" />
@@ -94,30 +83,45 @@
             <Font name="Verdana" size="14.0" />
          </font>
       </Label>
-      <Button fx:id="btnEsbjerg" layoutX="17.0" layoutY="431.0" mnemonicParsing="false" onAction="#openEsbjergFestivalWindow" prefHeight="26.0" prefWidth="128.0" text="Tickets Kr. 300" textFill="#1c86ee">
+      <Button fx:id="btnEsbjerg" layoutX="17.0" layoutY="431.0" mnemonicParsing="false" onAction="#openEsbjergFestivalWindow" prefHeight="26.0" prefWidth="100.0" text="Get Tickets" textFill="#1c86ee">
          <font>
             <Font name="Verdana Bold" size="13.0" />
          </font>
       </Button>
-      <Button layoutX="213.0" layoutY="431.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="174.0" text="Tickets from Kr. 200" textFill="#1c86ee">
+      <Button layoutX="213.0" layoutY="431.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="100.0" text="Get Tickets" textFill="#1c86ee">
          <font>
             <Font name="Verdana Bold" size="13.0" />
          </font>
       </Button>
-      <Button layoutX="637.0" layoutY="432.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="166.0" text="Tickets from Kr. 150" textFill="#1c86ee">
+      <Button layoutX="637.0" layoutY="432.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="100.0" text="Get Tickets" textFill="#1c86ee">
          <font>
             <Font name="Verdana Bold" size="13.0" />
          </font>
       </Button>
-      <Button layoutX="418.0" layoutY="431.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="174.0" text="Tickets from Kr. 350" textFill="#1c86ee">
+      <Button layoutX="418.0" layoutY="431.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="117.0" text="Get Tickets" textFill="#1c86ee">
          <font>
             <Font name="Verdana Bold" size="13.0" />
          </font>
       </Button>
-      <Label layoutX="14.0" layoutY="512.0" text="+45 176 98600652">
+      <Button fx:id="btnEsbjerg1" layoutX="131.0" layoutY="432.0" mnemonicParsing="false" onAction="#openEsbjergFestivalWindow" prefHeight="18.0" prefWidth="68.0" text="Info" textFill="#1c86ee">
          <font>
-            <Font size="20.0" />
+            <Font name="Verdana Bold" size="13.0" />
          </font>
-      </Label>
+      </Button>
+      <Button fx:id="btnEsbjerg11" layoutX="335.0" layoutY="433.0" mnemonicParsing="false" onAction="#openEsbjergFestivalWindow" prefHeight="18.0" prefWidth="68.0" text="Info" textFill="#1c86ee">
+         <font>
+            <Font name="Verdana Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEsbjerg111" layoutX="555.0" layoutY="432.0" mnemonicParsing="false" onAction="#openEsbjergFestivalWindow" prefHeight="18.0" prefWidth="68.0" text="Info" textFill="#1c86ee">
+         <font>
+            <Font name="Verdana Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEsbjerg1111" layoutX="754.0" layoutY="433.0" mnemonicParsing="false" onAction="#openEsbjergFestivalWindow" prefHeight="18.0" prefWidth="68.0" text="Info" textFill="#1c86ee">
+         <font>
+            <Font name="Verdana Bold" size="13.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

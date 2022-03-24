@@ -10,13 +10,13 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class MainScreenController {
+public class CoordinatorViewController {
 
     @FXML
     private Button btnEsbjerg;
 
     public void logIn(ActionEvent actionEvent, Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(MainScreenController.class.getResource("LogInView.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(CoordinatorViewController.class.getResource("LogInView.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 567, 326);
         stage.setTitle("Sign In");
         stage.setScene(scene);
