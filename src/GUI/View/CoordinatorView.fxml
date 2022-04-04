@@ -12,6 +12,11 @@
 
 <AnchorPane prefHeight="550.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.CoordinatorViewController">
    <children>
+      <ImageView fitHeight="85.0" fitWidth="52.0" layoutX="746.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Bildschirmfoto202022-03-21%20um%2016.02.14.png" />
+         </image>
+      </ImageView>
       <ToolBar prefHeight="97.0" prefWidth="824.0" style="-fx-background-color: #DABECA;" />
       <Button fx:id="logInBtn" contentDisplay="CENTER" ellipsisString="⚙" graphicTextGap="0.0" layoutX="672.0" layoutY="12.0" mnemonicParsing="false" onAction="#logIn" prefHeight="52.0" prefWidth="52.0" style="-fx-background-radius: 100;" text="⚙" visible="false" wrapText="true">
          <font>
@@ -37,14 +42,9 @@
          <image>
             <Image url="@Images/Mukiman.png" />
          </image></ImageView>
-      <ChoiceBox blendMode="SRC_ATOP" layoutX="203.0" layoutY="32.0" prefHeight="42.0" prefWidth="117.0" style="-fx-background-color: #202867#202867;" />
+      <ChoiceBox blendMode="SRC_ATOP" layoutX="203.0" layoutY="32.0" prefHeight="42.0" prefWidth="117.0" style="-fx-background-color: #DABECA #DABECA;" />
       <TextField layoutX="339.0" layoutY="32.0" prefHeight="42.0" prefWidth="395.0" promptText="search for artists and events" AnchorPane.topAnchor="32.0" />
-      <ImageView fitHeight="85.0" fitWidth="52.0" layoutX="746.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@Images/Bildschirmfoto202022-03-21%20um%2016.02.14.png" />
-         </image>
-      </ImageView>
-      <Label layoutX="213.0" layoutY="40.0" prefHeight="26.0" prefWidth="91.0" text="All Events" textFill="WHITE">
+      <Label layoutX="213.0" layoutY="40.0" prefHeight="26.0" prefWidth="91.0" style="-fx-background-color: #DABECA #DABECA;" text="All Events" textFill="WHITE">
          <font>
             <Font name="Verdana" size="17.0" />
          </font>
