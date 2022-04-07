@@ -27,4 +27,7 @@ public class LogInController {
         stage.setScene(scene);
         stage.show();
     }
+
+    public void cancelLogin(ActionEvent actionEvent) {
+    }
 }

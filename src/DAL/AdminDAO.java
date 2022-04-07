@@ -61,4 +61,25 @@ public class AdminDAO {
         psDeleteAdmin.close();
         con.close();
     }
+
+
+    /*public void getMailAndPassword(){
+        {
+            try {
+                String queryString = "SELECT * FROM Admins where AdminEmail=? and AdminPassword=?";
+                //set this values using PreparedStatement
+                ResultSet results = ps.executeQuery(queryString); //where ps is Object of PreparedStatement
+
+                if(!results.next()) {
+
+                    JOptionPane.showMessageDialog("Wrong Username and Password.");
+                }
+
+            } catch (SQLException sql) {
+
+                out.println(sql);
+            }finally{
+                //closing ResultSet,PreparedStatement and Connection object
+            }
+    }*/
 }
