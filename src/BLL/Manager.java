@@ -51,17 +51,17 @@ public class Manager implements LogicInterface {
 
     @Override
     public Coordinator createCoordinator(Coordinator coordinator) throws Exception {
-        return null;
+        return this.coordinatorDAO.createCoordinator(coordinator);
     }
 
     @Override
     public void deleteCoordinator(Coordinator coordinator) throws SQLException {
-
+        this.coordinatorDAO.deleteCoordinator(coordinator);
     }
 
     @Override
     public void updateCoordinator(Coordinator coordinator) throws SQLException {
-
+        this.coordinatorDAO.updateCoordinator(coordinator);
     }
 
     @Override
@@ -71,17 +71,17 @@ public class Manager implements LogicInterface {
 
     @Override
     public Event createEvent(Event event) throws Exception {
-        return null;
+        return this.eventDAO.createEvent(event);
     }
 
     @Override
     public void deleteEvent(Event event) throws SQLException {
-
+        this.eventDAO.deleteEvent(event);
     }
 
     @Override
     public void updateEvent(Event event) throws SQLException {
-
+        this.eventDAO.updateEvent(event);
     }
 
     @Override
@@ -91,17 +91,17 @@ public class Manager implements LogicInterface {
 
     @Override
     public User createUser(User user) throws Exception {
-        return null;
+        return this.userDAO.createUser(user);
     }
 
     @Override
     public void deleteUser(User user) throws SQLException {
-
+        this.userDAO.deleteUser(user);
     }
 
     @Override
     public void updateUser(User user) throws SQLException {
-
+        this.userDAO.updateUser(user);
     }
 
     @Override

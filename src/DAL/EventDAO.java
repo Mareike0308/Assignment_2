@@ -16,7 +16,7 @@ public class EventDAO {
         cm = new ConnectionManager();
     }
 
-    public static Event createEvent(Event event) throws Exception {
+    public Event createEvent(Event event) throws Exception {
         Event eventCreated = null;
         Connection con = cm.getConnection();
         String sqlSelectEvent = "INSERT INTO Events VALUES(?,?,?,?,?)";

@@ -16,7 +16,7 @@ public class UserDAO {
         cm = new ConnectionManager();
     }
 
-    public static User createUser(User user) throws Exception {
+    public User createUser(User user) throws Exception {
         User userCreated = null;
         Connection con = cm.getConnection();
         String sqlSelectUser = "INSERT INTO Users VALUES(?,?,?,?,?)";
