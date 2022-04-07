@@ -15,7 +15,7 @@ public class AdminDAO {
         cm = new ConnectionManager();
     }
 
-    public static Admin createAdmin(Admin admin) throws Exception {
+    public Admin createAdmin(Admin admin) throws Exception {
         Admin adminCreated = null;
         Connection con = cm.getConnection();
         String sqlSelectAdmin = "INSERT INTO Admins VALUES(?,?,?)";
