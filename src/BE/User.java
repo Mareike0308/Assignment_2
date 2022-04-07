@@ -10,7 +10,7 @@ public class User {
     private int userId;
 
 
-    public User (String userName, String userEmail, String userTicket, int userPhoneNumber, int userAmountOfTickets, int userId) {
+    public User (String userName, String userEmail, int userPhoneNumber, int userAmountOfTickets, String userTicket, int userId) {
         this.userName = userName ;
         this.userEmail = userEmail ;
         this.userTicket = userTicket ;
