@@ -4,6 +4,7 @@ import BE.Admin;
 import BE.Coordinator;
 import BE.Event;
 import BE.User;
+import com.microsoft.sqlserver.jdbc.SQLServerException;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -48,4 +49,7 @@ public interface LogicInterface {
 
     public void removeCoordinatorFromEvent();
 
+    public Admin getAdminLogIn();
+
+    Admin getAdminLogIn(String mail, String pass, Admin admin) throws SQLServerException;
 }

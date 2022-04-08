@@ -8,6 +8,7 @@ import DAL.AdminDAO;
 import DAL.CoordinatorDAO;
 import DAL.EventDAO;
 import DAL.UserDAO;
+import com.microsoft.sqlserver.jdbc.SQLServerException;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -118,4 +119,18 @@ public class Manager implements LogicInterface {
     public void removeCoordinatorFromEvent() {
 
     }
+
+    @Override
+    public Admin getAdminLogIn() {
+        return null;
+    }
+
+    @Override
+    public Admin getAdminLogIn(String mail, String pass, Admin admin) throws SQLServerException {
+        return this.adminDAO.displayUsers(mail, pass, admin);
+    }
+
+
+
+
 }

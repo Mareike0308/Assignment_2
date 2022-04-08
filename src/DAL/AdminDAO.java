@@ -1,7 +1,7 @@
 package DAL;
 
 import BE.Admin;
-import BE.Coordinator;
+import com.microsoft.sqlserver.jdbc.SQLServerException;
 
 import java.io.IOException;
 import java.sql.*;
@@ -9,6 +9,7 @@ import java.sql.*;
 public class AdminDAO {
 
     private static ConnectionManager cm;
+
 
 
     public AdminDAO() throws IOException {
@@ -25,7 +26,7 @@ public class AdminDAO {
         psInsertAdmin.setString(2, admin.getAdminPassword());
         psInsertAdmin.addBatch();
         psInsertAdmin.executeBatch();
-        ResultSet rs =  psInsertAdmin.getGeneratedKeys();
+        ResultSet rs = psInsertAdmin.getGeneratedKeys();
         while (rs.next()) {
 
             adminCreated = new Admin(
@@ -63,14 +64,14 @@ public class AdminDAO {
     }
 
 
-    /*public void getMailAndPassword(){
+    /*public void getMailAndPassword() {
         {
             try {
                 String queryString = "SELECT * FROM Admins where AdminEmail=? and AdminPassword=?";
                 //set this values using PreparedStatement
                 ResultSet results = ps.executeQuery(queryString); //where ps is Object of PreparedStatement
 
-                if(!results.next()) {
+                if (!results.next()) {
 
                     JOptionPane.showMessageDialog("Wrong Username and Password.");
                 }
@@ -78,8 +79,37 @@ public class AdminDAO {
             } catch (SQLException sql) {
 
                 out.println(sql);
-            }finally{
+            } finally {
                 //closing ResultSet,PreparedStatement and Connection object
             }
+        }
     }*/
+
+    public Admin displayUsers(String mail, String pass, Admin admin) throws SQLServerException {
+        boolean flag = false;
+        Connection con = cm.getConnection();
+        try {
+            String sqlFindAdmin = "SELECT * FROM Admins where AdminEmail=? and AdminPassword=?";
+            PreparedStatement pstStatementSelectAdmin = con.prepareStatement(sqlFindAdmin);
+            ResultSet results = pstStatementSelectAdmin.executeQuery();
+
+            while (results.next()) {
+                String adminemail = results.getString("AdminEmail");
+                String password = results.getString("AdminPassword");
+
+                if ((mail.equals(adminemail)) && (pass.equals(password))) {
+                    flag = true;
+                    return admin;
+
+                }
+                results.close();
+                pstStatementSelectAdmin.close();
+                con.close();
+
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return admin;
+    }
 }
