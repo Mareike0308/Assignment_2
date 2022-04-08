@@ -37,7 +37,7 @@
          <image>
             <Image url="@Images/Mukiman.png" />
          </image></ImageView>
-      <ChoiceBox blendMode="SRC_ATOP" layoutX="203.0" layoutY="32.0" prefHeight="42.0" prefWidth="117.0" style="-fx-background-color: #DABECA #DABECA;" />
+      <ChoiceBox fx:id="eventChoiceBox" blendMode="SRC_ATOP" layoutX="203.0" layoutY="32.0" prefHeight="42.0" prefWidth="117.0"  style="-fx-background-color: #DABECA #DABECA;" />
       <TextField layoutX="339.0" layoutY="32.0" prefHeight="42.0" prefWidth="395.0" promptText="search for artists and events" AnchorPane.topAnchor="32.0" />
       <Label layoutX="213.0" layoutY="40.0" prefHeight="26.0" prefWidth="91.0" style="-fx-background-color: #DABECA #DABECA;" text="All Events" textFill="WHITE">
          <font>
@@ -65,11 +65,6 @@
             <Font name="Verdana" size="14.0" />
          </font>
       </Label>
-      <Button fx:id="btnEsbjerg" layoutX="19.0" layoutY="432.0" mnemonicParsing="false" onAction="#openEsbjergFestivalWindow" prefHeight="26.0" prefWidth="100.0" text="Get Tickets" textFill="#1c86ee">
-         <font>
-            <Font name="Verdana Bold" size="13.0" />
-         </font>
-      </Button>
       <Button layoutX="217.0" layoutY="431.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="100.0" text="Get Tickets" textFill="#1c86ee">
          <font>
             <Font name="Verdana Bold" size="13.0" />
@@ -85,26 +80,7 @@
             <Font name="Verdana Bold" size="13.0" />
          </font>
       </Button>
-      <Button fx:id="btnEsbjerg1" layoutX="131.0" layoutY="432.0" mnemonicParsing="false" onAction="#openEsbjergFestivalWindow" prefHeight="18.0" prefWidth="68.0" text="Info" textFill="#1c86ee">
-         <font>
-            <Font name="Verdana Bold" size="13.0" />
-         </font>
-      </Button>
-      <Button fx:id="btnEsbjerg11" layoutX="344.0" layoutY="433.0" mnemonicParsing="false" onAction="#openEsbjergFestivalWindow" prefHeight="18.0" prefWidth="68.0" text="Info" textFill="#1c86ee">
-         <font>
-            <Font name="Verdana Bold" size="13.0" />
-         </font>
-      </Button>
-      <Button fx:id="btnEsbjerg111" layoutX="549.0" layoutY="432.0" mnemonicParsing="false" onAction="#openEsbjergFestivalWindow" prefHeight="18.0" prefWidth="68.0" text="Info" textFill="#1c86ee">
-         <font>
-            <Font name="Verdana Bold" size="13.0" />
-         </font>
-      </Button>
-      <Button fx:id="btnEsbjerg1111" layoutX="746.0" layoutY="433.0" mnemonicParsing="false" onAction="#openEsbjergFestivalWindow" prefHeight="18.0" prefWidth="68.0" text="Info" textFill="#1c86ee">
-         <font>
-            <Font name="Verdana Bold" size="13.0" />
-         </font>
-      </Button>
+
       <Button fx:id="logInBtn" contentDisplay="CENTER" ellipsisString="⚙" graphicTextGap="0.0" layoutX="757.0" layoutY="31.0" mnemonicParsing="false" onAction="#logIn" prefHeight="31.0" prefWidth="21.0" style="-fx-background-radius: 50;" text="⚙" wrapText="true">
          <font>
             <Font size="21.0" />
