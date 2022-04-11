@@ -30,7 +30,7 @@ public class LogInController implements Initializable {
 
     public void cancelLogin(ActionEvent actionEvent, Stage stage) throws IOException {
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getClassLoader().getResource("GUI/View/CoordinatorView.fxml"));
+        loader.setLocation(getClass().getClassLoader().getResource("GUI/View/MainScreenWindow.fxml"));
         Parent root = loader.load();
         stage.setScene(new Scene(root));
         stage.setResizable(false);

@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="549.0" prefWidth="823.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.CoordinatorViewController">
+<AnchorPane prefHeight="549.0" prefWidth="823.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.MainScreenController">
    <children>
       <ToolBar prefHeight="97.0" prefWidth="824.0" style="-fx-background-color: #449DD1;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
       <ImageView fitHeight="241.0" fitWidth="174.0" layoutX="25.0" layoutY="183.0" pickOnBounds="true" preserveRatio="true">

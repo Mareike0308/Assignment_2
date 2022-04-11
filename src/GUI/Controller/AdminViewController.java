@@ -28,7 +28,7 @@ public class AdminViewController {
 
         public void logOutBtn(ActionEvent actionEvent) throws IOException {
                 FXMLLoader loader = new FXMLLoader();
-                loader.setLocation(getClass().getClassLoader().getResource("GUI/View/CoordinatorView.fxml"));
+                loader.setLocation(getClass().getClassLoader().getResource("GUI/View/MainScreenWindow.fxml"));
                 Parent root = loader.load();
                 Stage stage = new Stage();
                 stage.setScene(new Scene(root));

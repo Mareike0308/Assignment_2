@@ -12,7 +12,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.sql.SQLException;
 
-public class CoordinatorViewController {
+public class MainScreenController {
 
     @FXML
     private Button btnEsbjerg;
