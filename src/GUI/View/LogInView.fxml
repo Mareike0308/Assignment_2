@@ -40,7 +40,7 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
-      <Button fx:id="cancelBtn" layoutX="253.0" layoutY="241.0" mnemonicParsing="false" onAction="#cancelLogin" prefHeight="38.0" prefWidth="87.0" style="-fx-background-radius: 25;" text="Cancel" textFill="#656565">
+      <Button fx:id="btnCancelLogin" layoutX="253.0" layoutY="241.0" mnemonicParsing="false" onAction="#cancelLogin" prefHeight="38.0" prefWidth="87.0" style="-fx-background-radius: 25;" text="Cancel" textFill="#656565">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>

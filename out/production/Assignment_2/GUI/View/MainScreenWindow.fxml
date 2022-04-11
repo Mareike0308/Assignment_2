@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="549.0" prefWidth="823.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.CoordinatorViewController">
+<AnchorPane prefHeight="549.0" prefWidth="823.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.MainScreenController">
    <children>
       <ToolBar prefHeight="97.0" prefWidth="824.0" style="-fx-background-color: #449DD1;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
       <ImageView fitHeight="241.0" fitWidth="174.0" layoutX="25.0" layoutY="183.0" pickOnBounds="true" preserveRatio="true">
@@ -61,9 +61,9 @@
          </font>
       </Label>
 
-            <Button fx:id="logInBtn" contentDisplay="CENTER" ellipsisString="" graphicTextGap="0.0" layoutX="717.0" layoutY="24.0" mnemonicParsing="false" onAction="#logIn" prefHeight="42.0" prefWidth="67.0" style="-fx-background-radius: 50;" wrapText="true">
+            <Button fx:id="logInBtn" contentDisplay="CENTER" ellipsisString="" graphicTextGap="0.0" layoutX="730.0" layoutY="24.0" mnemonicParsing="false" onAction="#logIn" prefHeight="42.0" prefWidth="42.0" style="-fx-background-radius: 100; -fx-background-image: Images\Bild5.png;" text="👥" textFill="#00000090" wrapText="true">
          <font>
-            <Font name="Verdana" size="14.0" />
+            <Font name="Verdana" size="18.0" />
          </font>
       </Button>
       <Label layoutX="59.0" layoutY="131.0" text="DISCOVER" textFill="#449dd1">
@@ -81,10 +81,5 @@
             <Font name="Verdana" size="14.0" />
          </font>
       </Label>
-      <ImageView fitHeight="42.0" fitWidth="56.0" layoutX="730.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@Images/Bild5.png" />
-         </image>
-      </ImageView>
    </children>
 </AnchorPane>
