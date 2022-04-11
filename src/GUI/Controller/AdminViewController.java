@@ -1,13 +1,11 @@
 package GUI.Controller;
 
+import GUI.Model.AdminModel;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -25,6 +23,7 @@ public class AdminViewController {
         public Button adminLogOutBTN;
         public TableView eventListTable;
         public TableView coordinatorListTable;
+        public TableColumn eventTable;
 
         public void logOutBtn(ActionEvent actionEvent) throws IOException {
                 FXMLLoader loader = new FXMLLoader();
@@ -60,5 +59,12 @@ public class AdminViewController {
                 stage.centerOnScreen();
                 stage.show();
         }
+
+   /* public void deleteEvent(ActionEvent actionEvent) {
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Delete Event ?", ButtonType.YES, ButtonType.NO, ButtonType.CANCEL);
+            alert.showAndWait();
+            AdminModel.deleteEvent(eventTable.getSelectionModel().getSelectedItem());
+            eventTable.getItems().remove(eventTable.getSelectionModel().getSelectedIndex());
+    } */
 }
 

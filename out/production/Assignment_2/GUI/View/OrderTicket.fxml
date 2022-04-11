@@ -12,7 +12,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="494.0" prefWidth="407.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.OrderTicketController">
+<AnchorPane prefHeight="494.0" prefWidth="407.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.OrderTicketController"  style="-fx-background-color:#449DD1">
    <children>
       <GridPane layoutX="14.0" layoutY="7.0" prefHeight="413.0" prefWidth="382.0">
          <columnConstraints>

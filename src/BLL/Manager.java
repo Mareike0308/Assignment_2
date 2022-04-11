@@ -131,6 +131,9 @@ public class Manager implements LogicInterface {
     }
 
 
+   /* public void deleteEvent(Event selectedItem) {
+        eventDAO.deleteEvent(selectedItem);
+    }
 
-
+    */
 }
