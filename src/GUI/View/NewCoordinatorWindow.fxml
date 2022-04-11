@@ -4,7 +4,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="222.0" prefWidth="359.0" style="-fx-background-color: #DABECA;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.NewAdminController">
+<AnchorPane prefHeight="222.0" prefWidth="359.0" style="-fx-background-color: #449DD1;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.NewAdminController">
    <children>
       <TextField layoutX="70.0" layoutY="39.0" prefHeight="25.0" prefWidth="202.0" promptText="Name" />
       <TextField layoutX="70.0" layoutY="71.0" prefHeight="25.0" prefWidth="202.0" promptText="Email" />

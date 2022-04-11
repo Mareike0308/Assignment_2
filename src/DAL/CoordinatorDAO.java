@@ -13,7 +13,7 @@ public class CoordinatorDAO {
         cm = new ConnectionManager();
     }
 
-    public static Coordinator createCoordinator(Coordinator coordinator) throws Exception {
+    public Coordinator createCoordinator(Coordinator coordinator) throws Exception {
         Coordinator coordinatorCreated = null;
         Connection con = cm.getConnection();
         String sqlSelectCoordinator = "INSERT INTO Coordinators VALUES(?,?,?)";
