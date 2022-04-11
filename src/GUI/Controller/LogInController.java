@@ -36,17 +36,6 @@ public class LogInController implements Initializable {
         stage.show();
     }
 
-    public void cancelLogin(ActionEvent actionEvent, Stage stage) throws IOException {
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getClassLoader().getResource("GUI/View/MainScreenWindow.fxml"));
-        Parent root = loader.load();
-        stage.setScene(new Scene(root));
-        stage.setResizable(false);
-        stage.setTitle("Admin Screen");
-        stage.centerOnScreen();
-        stage.show();
-    }
-
     public void cancelLogin(ActionEvent actionEvent) throws IOException{
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Cancel login?", ButtonType.YES, ButtonType.NO, ButtonType.CANCEL);
         alert.showAndWait();

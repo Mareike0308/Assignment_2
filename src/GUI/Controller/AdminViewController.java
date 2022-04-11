@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class AdminViewController {
-        public Button addAdminBTN;
+        public Button createNewUserBTN;
         public Button adminSearchBTN;
         public TextField adminSearchBar;
         public Button addCoordinatorToEventBTN;
@@ -48,7 +48,7 @@ public class AdminViewController {
                 stage.show();
         }
 
-        public void addAdminBtn(ActionEvent actionEvent) throws IOException {
+        public void createNewUser (ActionEvent actionEvent) throws IOException {
                 FXMLLoader loader = new FXMLLoader();
                 loader.setLocation(getClass().getClassLoader().getResource("GUI/View/NewAdminWindow.fxml"));
                 Parent root = loader.load();
@@ -59,6 +59,8 @@ public class AdminViewController {
                 stage.centerOnScreen();
                 stage.show();
         }
+
+
 
    /* public void deleteEvent(ActionEvent actionEvent) {
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Delete Event ?", ButtonType.YES, ButtonType.NO, ButtonType.CANCEL);
