@@ -24,44 +24,30 @@ public class MainScreenController {
 
     @FXML
     private ImageView event1Img;
-
     @FXML
     private Button event1Btn;
-
     @FXML
     private Label event1Lbl;
-
     @FXML
     private ImageView event2Img;
-
     @FXML
     private Button event2Btn;
-
     @FXML
     private Label event2Lbl;
-
     @FXML
     private ImageView event3Img;
-
     @FXML
     private Button event3Btn;
-
     @FXML
     private Label event3Lbl;
-
     @FXML
     private ImageView event4Img;
-
     @FXML
     private Button event4Btn;
-
     @FXML
     private Label event4Lbl;
-
-
     @FXML
     private Button btnEsbjerg;
-
     @FXML
     private ChoiceBox eventChoiceBox;
     private ImageObserver imageObserver;
