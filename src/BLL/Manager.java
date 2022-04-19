@@ -106,7 +106,7 @@ public class Manager implements LogicInterface {
     }
 
     @Override
-    public List<Coordinator> getMoviesFromCategories(Event event) throws SQLException {
+    public List<Event> getEventFromCoordinator(Coordinator event) throws SQLException {
         return null;
     }
 
@@ -128,6 +128,11 @@ public class Manager implements LogicInterface {
     @Override
     public Admin getAdminLogIn(String mail, String pass, Admin admin) throws SQLServerException {
         return this.adminDAO.displayUsers(mail, pass, admin);
+    }
+
+    @Override
+    public List<Coordinator> getCoordinatorFromEvent(Event selectedEvent) {
+        return null;
     }
 
 
