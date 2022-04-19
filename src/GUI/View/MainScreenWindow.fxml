@@ -51,7 +51,7 @@
                            </viewport>
                         </ImageView>
                         <Button fx:id="event1Btn" mnemonicParsing="false" onAction="#Btn1Pressed" onMouseEntered="#OverBtn1" onMouseExited="#ExitBtn1" opacity="0.0" prefHeight="240.0" prefWidth="171.0" text="Button" />
-                        <ImageView fx:id="event2Img" fitHeight="241.0" fitWidth="187.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+                        <ImageView fx:id="event2img" fitHeight="241.0" fitWidth="187.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
                            <image>
                               <Image url="@Images/Bildschirmfoto%202022-03-21%20um%2016.35.05.png" />
                            </image>
@@ -72,13 +72,13 @@
                               <Font name="Verdana" size="14.0" />
                            </font>
                         </Label>
-                        <ImageView fx:id="event4Img" fitHeight="241.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3">
+                        <ImageView fx:id="event4img" fitHeight="241.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3">
                            <image>
                               <Image url="@Images/Mukiman.png" />
                            </image>
                         </ImageView>
                         <Button fx:id="event4Btn" mnemonicParsing="false" onAction="#event4Pressed" onMouseEntered="#event4Ent" onMouseExited="#event4Exi" opacity="0.0" prefHeight="236.0" prefWidth="161.0" text="Button" GridPane.columnIndex="3" />
-                        <ImageView fx:id="event3Img" fitHeight="241.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
+                        <ImageView fx:id="event3img" fitHeight="241.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
                            <image>
                               <Image url="@Images/Ivano%20on%20Tour.jpeg" />
                            </image>
