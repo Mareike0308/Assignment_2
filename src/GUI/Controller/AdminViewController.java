@@ -43,7 +43,7 @@ public class AdminViewController {
 
         private final ObservableList<Event> dataList = FXCollections.observableArrayList();
         private final ObservableList<Coordinator> dataList2 = FXCollections.observableArrayList();
-
+        private int mode = EventSelected;
         private final static int EventSelected = 0;
         private final static int CoordinatorSelected = 1;
 
@@ -137,6 +137,7 @@ public class AdminViewController {
 
         public void showEventCoordinatorsInList() {
                 clearListView();
+                mode = EventSelected;
                 Event selectedEvent = (Event) eventListTable.getSelectionModel().getSelectedItem();
                 try {
                         LogicInterface bll = new Manager();
@@ -152,6 +153,7 @@ public class AdminViewController {
 
         public void showCoordinatorEventsInList() {
                 clearListView();
+                mode = CoordinatorSelected;
                 Coordinator selectedCoordinator = (Coordinator) coordinatorInEventList.getSelectionModel().getSelectedItem();  //get selected category in category table
                 try {
                         LogicInterface bll = new Manager();
