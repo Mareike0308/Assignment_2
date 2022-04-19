@@ -7,6 +7,10 @@ import BLL.Manager;
 import GUI.Model.AdminModel;
 import GUI.Model.CoordinatorModel;
 import GUI.Model.EventModel;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -22,7 +26,6 @@ import java.util.List;
 
 public class AdminViewController {
         public Button createNewUserBTN;
-        public Button adminSearchBTN;
         public TextField adminSearchBar;
         public Button addCoordinatorToEventBTN;
         public Button deleteCoordinatorBTN;
@@ -38,12 +41,17 @@ public class AdminViewController {
         EventModel eventModel = new EventModel();
         CoordinatorModel coordinatorModel= new CoordinatorModel();
 
+        private final ObservableList<Event> dataList = FXCollections.observableArrayList();
+        private final ObservableList<Coordinator> dataList2 = FXCollections.observableArrayList();
+
         private final static int EventSelected = 0;
         private final static int CoordinatorSelected = 1;
 
         @FXML
         public void initialize() throws SQLException, IOException {
 
+                filter();
+                filterCoord();
                 setUpEventListTable();
                 setUpCoordinatorListTable();
                 eventListTable.setOnMouseClicked(event -> showEventCoordinatorsInList());
@@ -51,12 +59,12 @@ public class AdminViewController {
         }
 
 
-        public void setUpEventListTable() throws SQLException, IOException {
+        public void setUpEventListTable() {
                 TableColumn<Event, String> column1 = new TableColumn<>("Name");
                 column1.setCellValueFactory(new PropertyValueFactory<>("eventName"));
         }
 
-        public void setUpCoordinatorListTable() throws SQLException, IOException {
+        public void setUpCoordinatorListTable() {
                 TableColumn<Coordinator, String> column1 = new TableColumn<>("Name");
                 column1.setCellValueFactory(new PropertyValueFactory<>("coordinatorName"));
         }
@@ -160,6 +168,54 @@ public class AdminViewController {
                 coordinatorInEventList.getItems().add(eventListTable.getSelectionModel().getSelectedItem());
         }
 
+
+       public void filter() throws SQLException, IOException {
+                dataList.addAll(eventModel.getAllEvents());
+                FilteredList<Event> filteredData = new FilteredList<>(dataList, b -> true);
+
+               adminSearchBar.textProperty().addListener((observable, oldValue, newValue) -> {
+                        filteredData.setPredicate(event -> {
+                                if (newValue == null || newValue.isEmpty()) {
+                                        return true;
+                                }
+                                String lowerCaseFilter = newValue.toLowerCase();
+
+                                if (event.getEventName().toLowerCase().contains(lowerCaseFilter) )
+                                        return true;
+                                else
+                                        return false;
+                        });
+                });
+
+                SortedList<Event> sortedData = new SortedList<>(filteredData);
+                sortedData.comparatorProperty().bind(eventListTable.comparatorProperty());
+                eventListTable.setItems(sortedData);
+        }
+
+        public void filterCoord() throws SQLException, IOException {
+
+                dataList2.addAll(coordinatorModel.getGetAllCoordinators());
+                FilteredList<Coordinator> filteredData = new FilteredList<>(dataList2, b -> true);
+
+                adminSearchBar.textProperty().addListener((observable, oldValue, newValue) -> {
+                        filteredData.setPredicate(coordinator -> {
+                                if (newValue == null || newValue.isEmpty()) {
+                                        return true;
+                                }
+                                String lowerCaseFilter = newValue.toLowerCase();
+
+                                if (coordinator.getCoordinatorName().toLowerCase().contains(lowerCaseFilter) )
+                                        return true;
+                                else
+                                        return false;
+
+                        });
+                });
+
+                SortedList<Coordinator> sortedData = new SortedList<>(filteredData);
+                sortedData.comparatorProperty().bind(coordinatorListTable.comparatorProperty());
+                coordinatorListTable.setItems(sortedData);
+        }
 
    /* public void deleteEvent(ActionEvent actionEvent) {
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Delete Event ?", ButtonType.YES, ButtonType.NO, ButtonType.CANCEL);
