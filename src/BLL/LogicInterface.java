@@ -43,7 +43,7 @@ public interface LogicInterface {
 
     public void updateUser(User user) throws SQLException;
 
-    public List<Coordinator> getMoviesFromCategories(Event event) throws SQLException;
+    public List<Event> getEventFromCoordinator(Coordinator event) throws SQLException;
 
     public void addCoordinatorToEvent();
 
@@ -52,4 +52,6 @@ public interface LogicInterface {
     public Admin getAdminLogIn();
 
     Admin getAdminLogIn(String mail, String pass, Admin admin) throws SQLServerException;
+
+    List<Coordinator> getCoordinatorFromEvent(Event selectedEvent);
 }
