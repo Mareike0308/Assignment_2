@@ -60,6 +60,24 @@ public class AdminViewController {
                 stage.show();
         }
 
+        public void deleteCoordinator(ActionEvent actionEvent) {
+        }
+
+        public void deleteEvent(ActionEvent actionEvent) {
+        }
+
+        public void createNewEvent(ActionEvent actionEvent) throws IOException {
+                FXMLLoader loader = new FXMLLoader();
+                loader.setLocation(getClass().getClassLoader().getResource("GUI/View/NewEventWindow.fxml"));
+                Parent root = loader.load();
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root));
+                stage.setResizable(false);
+                stage.setTitle("New Event");
+                stage.centerOnScreen();
+                stage.show();
+        }
+
 
 
    /* public void deleteEvent(ActionEvent actionEvent) {
