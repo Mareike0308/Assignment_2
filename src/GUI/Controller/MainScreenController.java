@@ -49,7 +49,23 @@ public class MainScreenController {
     @FXML
     private Button btnEsbjerg;
     @FXML
+    private Label aboutUsBtn;
+    @FXML
+    private Label PoliciesBtn;
+    @FXML
+    private Label contactUsBtn;
+    @FXML
+    private Label socialsBtn;
+    @FXML
     private ChoiceBox eventChoiceBox;
+    @FXML
+    private ImageView imViewLogo;
+    @FXML
+    private ImageView imViewPic1;
+    @FXML
+    private ImageView imViewPic2;
+    @FXML
+    private ImageView imViewPic3;
     private ImageObserver imageObserver;
 
     public void logIn(ActionEvent actionEvent) throws IOException {
@@ -66,8 +82,12 @@ public class MainScreenController {
 
     @FXML
     public void initialize() throws SQLException, IOException {
+
+
         eventChoiceBox.getItems().removeAll(eventChoiceBox.getItems());
         eventChoiceBox.getItems().addAll("Concerts", "Culture", "Humor", "Party", "Sports");
+
+
 
 
 
@@ -124,5 +144,85 @@ public class MainScreenController {
 
     public void event4Exi(MouseEvent mouseEvent) {
         event4Lbl.setUnderline(false);
+    }
+
+    public void aboutUsPressed(MouseEvent mouseEvent) throws IOException {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getClassLoader().getResource("GUI/View/AboutUsView.fxml"));
+        Parent root = loader.load();
+        Stage stage = new Stage();
+        stage.setScene(new Scene(root));
+        stage.setResizable(false);
+        stage.setTitle("About Us");
+        stage.centerOnScreen();
+        stage.show();
+    }
+
+    public void aboutUsEnt(MouseEvent mouseEvent) {
+        aboutUsBtn.setUnderline(true);
+    }
+
+    public void aboutUsExi(MouseEvent mouseEvent) {
+        aboutUsBtn.setUnderline(false);
+    }
+
+    public void PolPressed(MouseEvent mouseEvent) throws IOException {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getClassLoader().getResource("GUI/View/PolicyView.fxml"));
+        Parent root = loader.load();
+        Stage stage = new Stage();
+        stage.setScene(new Scene(root));
+        stage.setResizable(false);
+        stage.setTitle("Policies");
+        stage.centerOnScreen();
+        stage.show();
+    }
+
+    public void polEnt(MouseEvent mouseEvent) {
+        PoliciesBtn.setUnderline(true);
+    }
+
+    public void polExi(MouseEvent mouseEvent) {
+        PoliciesBtn.setUnderline(false);
+    }
+
+    public void contactPressed(MouseEvent mouseEvent) throws IOException {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getClassLoader().getResource("GUI/View/ContactView.fxml"));
+        Parent root = loader.load();
+        Stage stage = new Stage();
+        stage.setScene(new Scene(root));
+        stage.setResizable(false);
+        stage.setTitle("Contact Us");
+        stage.centerOnScreen();
+        stage.show();
+    }
+
+    public void contactEnt(MouseEvent mouseEvent) {
+        contactUsBtn.setUnderline(true);
+    }
+
+    public void contactExi(MouseEvent mouseEvent) {
+        contactUsBtn.setUnderline(false);
+    }
+
+    public void socialPressed(MouseEvent mouseEvent) throws IOException {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getClassLoader().getResource("GUI/View/SocialsView.fxml"));
+        Parent root = loader.load();
+        Stage stage = new Stage();
+        stage.setScene(new Scene(root));
+        stage.setResizable(false);
+        stage.setTitle("Socials");
+        stage.centerOnScreen();
+        stage.show();
+    }
+
+    public void socialEnt(MouseEvent mouseEvent) {
+        socialsBtn.setUnderline(true);
+    }
+
+    public void socialExi(MouseEvent mouseEvent) {
+        socialsBtn.setUnderline(false);
     }
 }

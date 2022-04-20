@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.Image?>
@@ -8,29 +9,20 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="622.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="622.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.AboutUsViewController">
    <children>
       <HBox alignment="TOP_CENTER" prefHeight="143.0" prefWidth="600.0" style="-fx-background-color: #449DD1;">
          <children>
             <VBox prefHeight="200.0" prefWidth="90.0">
                <children>
                   <VBox prefHeight="6.0" prefWidth="100.0" />
-                  <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="42.0" style="-fx-background-color: #BCE7FD; -fx-background-radius: 25;">
-                     <graphic>
-                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../../OneDrive/Billeder/kisspng-computer-icons-arrow-clip-art-5afb354d9217c5.3083251315264126215984.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
+                  <Button fx:id="backBtn" mnemonicParsing="false" onAction="#returnToMain" prefHeight="32.0" prefWidth="54.0" style="-fx-background-color: #BCE7FD; -fx-background-radius: 25;" text="Return" />
                </children>
             </VBox>
-            <ImageView fitHeight="82.0" fitWidth="418.0" pickOnBounds="true">
+            <ImageView fx:id="ImViewLogo" fitHeight="82.0" fitWidth="418.0" pickOnBounds="true">
                <image>
-                  <Image url="@../../../../OneDrive/Billeder/ZUntiscacHtled.png" />
+                  <Image url="@Images/ZUntiscacHtled.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="65.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true" />
@@ -41,25 +33,22 @@
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="683.0" prefWidth="585.0">
                <children>
                   <HBox layoutX="-14.0" layoutY="-9.0" prefHeight="109.0" prefWidth="609.0" style="-fx-background-color: #449DD1;" />
-                  <ImageView fitHeight="172.0" fitWidth="258.0" layoutX="296.0" layoutY="227.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="imViewPic2" fitHeight="172.0" fitWidth="258.0" layoutX="296.0" layoutY="227.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../OneDrive/Billeder/vZLMcEg5JqfGeXydVkkxhk-1200-80.jpg" />
+                        <Image url="@Images/vZLMcEg5JqfGeXydVkkxhk-1200-80.jpg" />
                      </image></ImageView>
-                  <TextArea layoutX="55.0" layoutY="217.0" prefHeight="231.0" prefWidth="207.0" promptText="Our company started all the way back in 2022. Weve had a long and fruitful career and to this day our core values is still getting your order made as good as possible, as fast as possible.">
-                     <font>
-                        <Font size="15.0" />
-                     </font></TextArea>
                   <TextArea layoutX="351.0" layoutY="454.0" prefHeight="200.0" prefWidth="200.0" promptText="Since the beginning weve only employed top notch programmers. the best in the world some might say. we strive towards becoming the best program makers of the century and we will be happy to see you soon!" />
-                  <ImageView fitHeight="201.0" fitWidth="293.0" layoutX="146.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="imViewPic1" fitHeight="201.0" fitWidth="293.0" layoutX="146.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../OneDrive/Billeder/images.png" />
+                        <Image url="@Images/images.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="181.0" fitWidth="242.0" layoutX="55.0" layoutY="473.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="imViewPic3" fitHeight="181.0" fitWidth="242.0" layoutX="55.0" layoutY="473.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../OneDrive/Billeder/istockphoto-1169929038-170667a.jpg" />
+                        <Image url="@Images/istockphoto-1169929038-170667a.jpg" />
                      </image>
                   </ImageView>
+                  <Label alignment="TOP_LEFT" layoutX="65.0" layoutY="227.0" prefHeight="153.0" prefWidth="177.0" />
                </children>
             </AnchorPane>
          </content>

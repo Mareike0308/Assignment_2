@@ -119,7 +119,7 @@
       </ImageView>
       <HBox alignment="CENTER_LEFT" layoutY="512.0" prefHeight="50.0" prefWidth="824.0" style="-fx-background-color: #D5D5D5;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
-            <Label text="About Us">
+            <Label fx:id="aboutUsBtn" onMouseClicked="#aboutUsPressed" onMouseEntered="#aboutUsEnt" onMouseExited="#aboutUsExi" text="About Us">
                <HBox.margin>
                   <Insets left="15.0" right="15.0" />
                </HBox.margin>
@@ -127,7 +127,7 @@
                   <Font name="Arial" size="13.0" />
                </font>
             </Label>
-            <Label prefHeight="19.0" prefWidth="47.0" text="Policies">
+            <Label fx:id="PoliciesBtn" onMouseClicked="#PolPressed" onMouseEntered="#polEnt" onMouseExited="#polExi" prefHeight="19.0" prefWidth="47.0" text="Policies">
                <font>
                   <Font name="Arial" size="13.0" />
                </font>
@@ -135,7 +135,7 @@
                   <Insets right="15.0" />
                </HBox.margin>
             </Label>
-            <Label prefHeight="19.0" prefWidth="71.0" text="Contact Us">
+            <Label fx:id="contactUsBtn" onMouseClicked="#contactPressed" onMouseEntered="#contactEnt" onMouseExited="#contactExi" prefHeight="19.0" prefWidth="71.0" text="Contact Us">
                <font>
                   <Font name="Arial" size="13.0" />
                </font>
@@ -143,7 +143,7 @@
                   <Insets right="15.0" />
                </HBox.margin>
             </Label>
-            <Label prefHeight="19.0" prefWidth="71.0" text="Socials">
+            <Label fx:id="socialsBtn" onMouseClicked="#socialPressed" onMouseEntered="#socialEnt" onMouseExited="#socialExi" prefHeight="19.0" prefWidth="71.0" text="Socials">
                <font>
                   <Font name="Arial" size="13.0" />
                </font>
