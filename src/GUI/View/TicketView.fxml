@@ -15,7 +15,7 @@
 
 <AnchorPane prefHeight="214.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.TicketViewController">
    <children>
-      <ImageView fitHeight="240.0" fitWidth="171.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="eventImage" fitHeight="240.0" fitWidth="171.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Images/WhatsAppImage2022-03-21at4.13.39PM.jpeg" />
          </image>
@@ -24,12 +24,12 @@
          <children>
             <VBox alignment="TOP_CENTER" prefHeight="92.0" prefWidth="216.0">
                <children>
-                  <Label text="Name">
+                  <Label fx:id="userNameLbl" text="Name">
                      <font>
                         <Font name="Arial Bold" size="15.0" />
                      </font>
                   </Label>
-                  <Label text="Ticket type">
+                  <Label fx:id="ticketTypeLbl1" text="Ticket type">
                      <font>
                         <Font name="Arial Bold" size="15.0" />
                      </font>
@@ -38,12 +38,12 @@
             </VBox>
             <VBox alignment="BOTTOM_RIGHT" prefHeight="62.0" prefWidth="146.0" style="-fx-background-color: #87CEEB;">
                <children>
-                  <Label text="Date And Location " textFill="WHITE">
+                  <Label fx:id="dataNLocoLbl1" text="Date And Location " textFill="WHITE">
                      <font>
                         <Font name="Arial Bold" size="16.0" />
                      </font>
                   </Label>
-                  <Label text="Event Name" textFill="WHITE">
+                  <Label fx:id="eventNameLbl" text="Event Name" textFill="WHITE">
                      <font>
                         <Font name="Arial Bold" size="26.0" />
                      </font>
@@ -69,32 +69,32 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Label text="Custom Label">
+                        <Label fx:id="cstmLbl1" text="Custom Label">
                            <font>
                               <Font name="Arial Bold" size="14.0" />
                            </font>
                         </Label>
-                        <Label text="Custom Label" GridPane.rowIndex="1">
+                        <Label fx:id="cstmLbl2" text="Custom Label" GridPane.rowIndex="1">
                            <font>
                               <Font name="Arial Bold" size="14.0" />
                            </font>
                         </Label>
-                        <Label text="Custom Label" GridPane.rowIndex="2">
+                        <Label fx:id="cstmLbl3" text="Custom Label" GridPane.rowIndex="2">
                            <font>
                               <Font name="Arial Bold" size="14.0" />
                            </font>
                         </Label>
-                        <Label text="Yes/No" GridPane.columnIndex="1">
+                        <Label fx:id="yesNoLbl1" text="Yes/No" GridPane.columnIndex="1">
                            <font>
                               <Font name="Arial Bold" size="14.0" />
                            </font>
                         </Label>
-                        <Label text="Yes/No" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                        <Label fx:id="yesNoLbl2" text="Yes/No" GridPane.columnIndex="1" GridPane.rowIndex="1">
                            <font>
                               <Font name="Arial Bold" size="14.0" />
                            </font>
                         </Label>
-                        <Label text="Yes/No" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                        <Label fx:id="yesNoLbl3" text="Yes/No" GridPane.columnIndex="1" GridPane.rowIndex="2">
                            <font>
                               <Font name="Arial Bold" size="14.0" />
                            </font>
@@ -135,19 +135,19 @@
          </font>
       </Label>
       <Line endX="81.0" layoutX="501.0" layoutY="56.0" startX="-63.0" />
-      <Label layoutX="438.0" layoutY="65.0" text="Ticket type">
+      <Label fx:id="ticketTypeLbl2" layoutX="438.0" layoutY="65.0" text="Ticket type">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
       <Line endX="81.0" layoutX="502.0" layoutY="96.0" startX="-63.0" />
-      <Label layoutX="439.0" layoutY="104.0" text="Date and location">
+      <Label fx:id="dataNLocoLbl1" layoutX="439.0" layoutY="104.0" text="Date and location">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
       <Line endX="81.0" layoutX="502.0" layoutY="135.0" startX="-63.0" />
       <Label layoutX="492.0" layoutY="168.0" text="qr code here" />
-      <ImageView fitHeight="79.0" fitWidth="79.0" layoutX="472.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="qrImage" fitHeight="79.0" fitWidth="79.0" layoutX="472.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true" />
    </children>
 </AnchorPane>

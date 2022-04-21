@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -13,12 +14,11 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="615.0" prefWidth="575.0" style="-fx-background-color: #87CEEB;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.OrderTicketController">
    <children>
       <VBox alignment="TOP_CENTER" layoutX="427.0" prefHeight="620.0" prefWidth="148.0" style="-fx-background-color: #FFFFFF;">
          <children>
-            <Label text="Name of event">
+            <Label fx:id="eventNameLbl" text="Name of event">
                <font>
                   <Font name="Arial Bold" size="18.0" />
                </font>
@@ -26,12 +26,12 @@
                   <Insets top="5.0" />
                </VBox.margin>
             </Label>
-            <Label text="Date">
+            <Label fx:id="eventDateLbl" text="Date">
                <font>
                   <Font name="Arial" size="16.0" />
                </font>
             </Label>
-            <Label text="Location">
+            <Label fx:id="eventLocoLbl" text="Location">
                <font>
                   <Font size="16.0" />
                </font>
@@ -39,12 +39,12 @@
                   <Insets bottom="20.0" />
                </VBox.margin>
             </Label>
-            <Label text="Tickets left:">
+            <Label fx:id="ticketsLeftLbl" text="Tickets left:">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
-            <Label text="VIP Tickets left">
+            <Label fx:id="vipLeftLbl" text="VIP Tickets left">
                <font>
                   <Font size="16.0" />
                </font>
@@ -57,17 +57,44 @@
                   <Font size="16.0" />
                </font>
                <graphic>
-                  <TextField editable="false" prefHeight="27.0" prefWidth="65.0" />
+                  <TextField fx:id="priceTxtField" editable="false" prefHeight="27.0" prefWidth="65.0" />
                </graphic>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Label>
+            <Label contentDisplay="RIGHT" prefHeight="27.0" prefWidth="131.0" text="Amount:">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <graphic>
+                  <TextField fx:id="amountTxtfield" editable="false" prefHeight="27.0" prefWidth="65.0">
+                     <padding>
+                        <Insets right="20.0" />
+                     </padding>
+                  </TextField>
+               </graphic>
+               <VBox.margin>
+                  <Insets right="18.0" />
+               </VBox.margin>
             </Label>
             <VBox alignment="BOTTOM_RIGHT" prefHeight="439.0" prefWidth="148.0">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="33.0" prefWidth="59.0" style="-fx-background-radius: 25; -fx-background-color: #DEDEDE;" text="Cancel">
+                  <TextArea prefHeight="80.0" prefWidth="148.0" text="Ive read the policy page&#10;and understand, and &#10;agree with, the terms of&#10;service" />
+                  <RadioButton fx:id="AgreeBtn" contentDisplay="TOP" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="32.0" prefWidth="80.0" text="I agree">
+                     <padding>
+                        <Insets bottom="15.0" right="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets right="10.0" />
+                     </VBox.margin>
+                  </RadioButton>
+                  <Button fx:id="cancelBtn" mnemonicParsing="false" prefHeight="33.0" prefWidth="59.0" style="-fx-background-radius: 25; -fx-background-color: #DEDEDE;" text="Cancel">
                      <VBox.margin>
                         <Insets bottom="5.0" right="5.0" />
                      </VBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="33.0" prefWidth="59.0" style="-fx-background-radius: 25; -fx-background-color: #DEDEDE;" text="Order">
+                  <Button fx:id="orderBtn" mnemonicParsing="false" prefHeight="33.0" prefWidth="59.0" style="-fx-background-radius: 25; -fx-background-color: #DEDEDE;" text="Order">
                      <VBox.margin>
                         <Insets bottom="5.0" right="5.0" />
                      </VBox.margin>
@@ -116,30 +143,30 @@
                   </Label>
                </children>
             </VBox>
-            <Label prefHeight="28.0" prefWidth="73.0" text="Label" GridPane.rowIndex="3">
+            <Label fx:id="customLbl1" prefHeight="28.0" prefWidth="73.0" text="Label" GridPane.rowIndex="3">
                <font>
                   <Font name="Arial Bold" size="19.0" />
                </font>
             </Label>
-            <Label prefHeight="28.0" prefWidth="73.0" text="Label" GridPane.rowIndex="4">
+            <Label fx:id="customLbl2" prefHeight="28.0" prefWidth="73.0" text="Label" GridPane.rowIndex="4">
                <font>
                   <Font name="Arial Bold" size="19.0" />
                </font>
             </Label>
-            <Label prefHeight="28.0" prefWidth="73.0" text="Label" GridPane.rowIndex="5">
+            <Label fx:id="customLbl3" prefHeight="28.0" prefWidth="73.0" text="Label" GridPane.rowIndex="5">
                <font>
                   <Font name="Arial Bold" size="19.0" />
                </font>
             </Label>
-            <Label prefHeight="28.0" prefWidth="73.0" text="Label" GridPane.rowIndex="6">
+            <Label fx:id="customLbl4" prefHeight="28.0" prefWidth="73.0" text="Label" GridPane.rowIndex="6">
                <font>
                   <Font name="Arial Bold" size="19.0" />
                </font>
             </Label>
-            <TextField prefHeight="50.0" prefWidth="0.0" GridPane.columnIndex="1" />
-            <TextField prefHeight="50.0" prefWidth="284.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <TextField prefHeight="50.0" prefWidth="284.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <RadioButton mnemonicParsing="false" prefHeight="31.0" prefWidth="61.0" text="No" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <TextField fx:id="nameTxtfield" prefHeight="50.0" prefWidth="0.0" GridPane.columnIndex="1" />
+            <TextField fx:id="mailTxtfield" prefHeight="50.0" prefWidth="284.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="numberTxtfield" prefHeight="50.0" prefWidth="284.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <RadioButton fx:id="customLbl1No" mnemonicParsing="false" prefHeight="31.0" prefWidth="61.0" text="No" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <font>
                   <Font size="16.0" />
                </font>
@@ -147,7 +174,7 @@
                   <Insets left="80.0" />
                </GridPane.margin>
             </RadioButton>
-            <RadioButton mnemonicParsing="false" prefHeight="31.0" prefWidth="61.0" text="Yes" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <RadioButton fx:id="customLbl1Yes" mnemonicParsing="false" prefHeight="31.0" prefWidth="61.0" text="Yes" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <font>
                   <Font size="16.0" />
                </font>
@@ -155,7 +182,7 @@
                   <Insets right="80.0" />
                </GridPane.margin>
             </RadioButton>
-            <RadioButton mnemonicParsing="false" prefHeight="31.0" prefWidth="61.0" text="Yes" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <RadioButton fx:id="customLbl2Yes" mnemonicParsing="false" prefHeight="31.0" prefWidth="61.0" text="Yes" GridPane.columnIndex="1" GridPane.rowIndex="4">
                <font>
                   <Font size="16.0" />
                </font>
@@ -163,7 +190,7 @@
                   <Insets right="80.0" />
                </GridPane.margin>
             </RadioButton>
-            <RadioButton mnemonicParsing="false" prefHeight="31.0" prefWidth="61.0" text="Yes" GridPane.columnIndex="1" GridPane.rowIndex="5">
+            <RadioButton fx:id="customLbl3Yes" mnemonicParsing="false" prefHeight="31.0" prefWidth="61.0" text="Yes" GridPane.columnIndex="1" GridPane.rowIndex="5">
                <font>
                   <Font size="16.0" />
                </font>
@@ -171,7 +198,7 @@
                   <Insets right="80.0" />
                </GridPane.margin>
             </RadioButton>
-            <RadioButton mnemonicParsing="false" prefHeight="31.0" prefWidth="61.0" text="Yes" GridPane.columnIndex="1" GridPane.rowIndex="6">
+            <RadioButton fx:id="customLbl4Yes" mnemonicParsing="false" prefHeight="31.0" prefWidth="61.0" text="Yes" GridPane.columnIndex="1" GridPane.rowIndex="6">
                <font>
                   <Font size="16.0" />
                </font>
@@ -179,7 +206,7 @@
                   <Insets right="80.0" />
                </GridPane.margin>
             </RadioButton>
-            <RadioButton mnemonicParsing="false" prefHeight="31.0" prefWidth="61.0" text="No" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <RadioButton fx:id="customLblNo" mnemonicParsing="false" prefHeight="31.0" prefWidth="61.0" text="No" GridPane.columnIndex="1" GridPane.rowIndex="4">
                <font>
                   <Font size="16.0" />
                </font>
@@ -187,7 +214,7 @@
                   <Insets left="80.0" />
                </GridPane.margin>
             </RadioButton>
-            <RadioButton mnemonicParsing="false" prefHeight="31.0" prefWidth="61.0" text="No" GridPane.columnIndex="1" GridPane.rowIndex="5">
+            <RadioButton fx:id="customLbl3No" mnemonicParsing="false" prefHeight="31.0" prefWidth="61.0" text="No" GridPane.columnIndex="1" GridPane.rowIndex="5">
                <font>
                   <Font size="16.0" />
                </font>
@@ -195,7 +222,7 @@
                   <Insets left="80.0" />
                </GridPane.margin>
             </RadioButton>
-            <RadioButton mnemonicParsing="false" prefHeight="31.0" prefWidth="61.0" text="No" GridPane.columnIndex="1" GridPane.rowIndex="6">
+            <RadioButton fx:id="customLbl4No" mnemonicParsing="false" prefHeight="31.0" prefWidth="61.0" text="No" GridPane.columnIndex="1" GridPane.rowIndex="6">
                <font>
                   <Font size="16.0" />
                </font>
