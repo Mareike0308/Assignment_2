@@ -63,7 +63,7 @@ public class EventCoordDAO {
     public EventCoord createEventCoord(EventCoord eventCoord) throws SQLException {
         EventCoord eventCoord1 = null;
         Connection con = cm.getConnection();
-        String query = "insert into EventCoord (Eventd,Coordid) values(?,?);";
+        String query = "insert into EventCoord (EventId,CoordId) values(?,?);";
         PreparedStatement preparedStatement = con.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
         preparedStatement.setInt(1, eventCoord.getEventID());
         preparedStatement.setInt(2, eventCoord.getCoordinatorID());
@@ -128,8 +128,8 @@ public class EventCoordDAO {
         List<Coordinator> coordinators = new ArrayList<>();
         Connection con = cm.getConnection();
         String query = "select distinct Coordinators.* from EventCoord \n" +
-                "JOIN Coordinatros on EventCoord.coordID=Coordintaor.id\n" +
-                "where eventId=?";
+                "JOIN Coordinators on EventCoord.coordID=Coordinators.id\n" +
+                "where EventId=?";
         PreparedStatement ps = con.prepareStatement(query);
         ps.setInt(1, event.getEventId());
         ResultSet rs = ps.executeQuery();
@@ -156,9 +156,9 @@ public class EventCoordDAO {
         if (allCoordinatorsForGivenEvent.contains(coordinator))return;
         createEventCoord(new EventCoord(coordinator.getCoordinatorId(),event.getEventId()));
     }
-    public void removeCategoryFromMovie(Coordinator coordinator, Event event) throws SQLException {
+    public void removeCoordinatorFromEvent(Coordinator coordinator, Event event) throws SQLException {
         Connection con = cm.getConnection();
-        PreparedStatement ps = con.prepareStatement("delete from EventCoord where coordId=? and eventId=?");
+        PreparedStatement ps = con.prepareStatement("delete from EventCoord where CoordId=? and EventId=?");
         ps.setInt(1,coordinator.getCoordinatorId());
         ps.setInt(2,event.getEventId());
         ps.executeUpdate();

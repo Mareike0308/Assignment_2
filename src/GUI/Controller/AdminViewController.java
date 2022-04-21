@@ -62,11 +62,23 @@ public class AdminViewController {
         public void setUpEventListTable() {
                 TableColumn<Event, String> column1 = new TableColumn<>("Name");
                 column1.setCellValueFactory(new PropertyValueFactory<>("eventName"));
+                try {
+                        eventListTable.getItems().addAll(eventModel.getAllEvents());
+                } catch (SQLException e) {
+                        e.printStackTrace();
+                } catch (IOException e) {
+                        e.printStackTrace();
+                }
         }
 
         public void setUpCoordinatorListTable() {
                 TableColumn<Coordinator, String> column1 = new TableColumn<>("Name");
                 column1.setCellValueFactory(new PropertyValueFactory<>("coordinatorName"));
+                try {
+                        coordinatorListTable.getItems().addAll(coordinatorModel.getGetAllCoordinators());
+                } catch (SQLException e) {
+                        e.printStackTrace();
+                }
         }
 
 
