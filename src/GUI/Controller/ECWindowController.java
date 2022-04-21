@@ -1,6 +1,8 @@
 package GUI.Controller;
 
 import BE.User;
+import BLL.LogicInterface;
+import BLL.Manager;
 import GUI.Model.EventModel;
 import GUI.Model.UserModel;
 import javafx.event.ActionEvent;
@@ -18,6 +20,7 @@ import javafx.scene.control.Button;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.List;
 
 public class ECWindowController {
 
@@ -28,6 +31,8 @@ public class ECWindowController {
 
     EventModel eventModel = new EventModel();
     UserModel userModel = new UserModel();
+    private final static int EventSelected = 0;
+    private int mode = EventSelected;
 
     public ECWindowController() throws IOException {
     }
@@ -37,8 +42,8 @@ public class ECWindowController {
     public void initialize() throws SQLException, IOException {
 
         setUpEventTable();
-
-
+        setUpUserInfoTable();
+        eventTable.setOnMouseClicked(event -> showUsersEventInList());
 
     }
 
@@ -56,7 +61,28 @@ public class ECWindowController {
 
     }
 
-    /*public void setUpUserInfoTable() throws SQLException {
+    private void clearListView() {
+        userInfoTable.getItems().clear();
+
+
+    }
+
+    public void showUsersEventInList() {
+        clearListView();
+        mode = EventSelected;
+        BE.Event selectedEvent = (BE.Event) eventTable.getSelectionModel().getSelectedItem();
+        try {
+            LogicInterface bll = new Manager();
+            List<User> users = bll.getUsersFromEvents(selectedEvent);
+            userInfoTable.getItems().addAll(users);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void setUpUserInfoTable() throws SQLException {
         TableColumn<User, String> column1 = new TableColumn<>("Name");
         column1.setCellValueFactory(new PropertyValueFactory<>("userName"));
         TableColumn<User, String> column2 = new TableColumn<>("Email");
@@ -75,7 +101,7 @@ public class ECWindowController {
         userInfoTable.getColumns().add(column5);
         userInfoTable.getItems().clear();
         userInfoTable.getItems().addAll(userModel.getGetAllUsers());
-    }*/
+    }
 
 
     public void openNewEventWindow(ActionEvent actionEvent) throws IOException {

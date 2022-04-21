@@ -4,10 +4,7 @@ import BE.Admin;
 import BE.Coordinator;
 import BE.Event;
 import BE.User;
-import DAL.AdminDAO;
-import DAL.CoordinatorDAO;
-import DAL.EventDAO;
-import DAL.UserDAO;
+import DAL.*;
 import com.microsoft.sqlserver.jdbc.SQLServerException;
 
 import java.io.IOException;
@@ -19,6 +16,7 @@ public class Manager implements LogicInterface {
     CoordinatorDAO coordinatorDAO = new CoordinatorDAO();
     EventDAO eventDAO = new EventDAO();
     UserDAO userDAO = new UserDAO();
+    EventUserDAO eventUserDAO = new EventUserDAO();
 
     public Manager() throws IOException {
 
@@ -134,6 +132,13 @@ public class Manager implements LogicInterface {
     public List<Coordinator> getCoordinatorFromEvent(Event selectedEvent) {
         return null;
     }
+
+
+    @Override
+    public List<User> getUsersFromEvents(Event event) throws SQLException {
+        return eventUserDAO.getAllUsersForGivenEvent(event);
+    }
+
 
 
    /* public void deleteEvent(Event selectedItem) {

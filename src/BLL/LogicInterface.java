@@ -54,4 +54,6 @@ public interface LogicInterface {
     Admin getAdminLogIn(String mail, String pass, Admin admin) throws SQLServerException;
 
     List<Coordinator> getCoordinatorFromEvent(Event selectedEvent);
+
+    List<User> getUsersFromEvents(Event event) throws SQLException;
 }
