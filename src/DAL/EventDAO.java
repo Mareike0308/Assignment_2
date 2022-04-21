@@ -49,7 +49,7 @@ public class EventDAO {
     }
 
 
-    public void updateEvent(Event event) throws SQLException {
+    public void updateEvent(Event event) throws SQLException, IOException {
         Connection con = cm.getConnection();
         String sqlUpdateEvent = "UPDATE  Events SET EventName=?, EventDate=?,EventPlace=?,EventStartEnding=?, EventInfo=? WHERE ID=?;";
         PreparedStatement psUpdateEvent = con.prepareStatement(sqlUpdateEvent, Statement.RETURN_GENERATED_KEYS);
@@ -64,7 +64,7 @@ public class EventDAO {
     }
 
 
-    public void deleteEvent(Event event) throws SQLException {
+    public void deleteEvent(Event event) throws SQLException, IOException {
         Connection con = cm.getConnection();
         String sqlDeleteEvent = "DELETE FROM Events WHERE ID=?;";
         PreparedStatement psDeleteEvent = con.prepareStatement(sqlDeleteEvent, Statement.RETURN_GENERATED_KEYS);
@@ -74,7 +74,7 @@ public class EventDAO {
         con.close();
     }
 
-    public List<Event> getAllEvents() throws SQLException {
+    public List<Event> getAllEvents() throws SQLException, IOException {
         List<Event> allEvents = new ArrayList<>();
         try (Connection con = cm.getConnection()) {
             String sqlSelectEvent= "SELECT * FROM Events";

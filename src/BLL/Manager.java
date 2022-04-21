@@ -34,12 +34,12 @@ public class Manager implements LogicInterface {
     }
 
     @Override
-    public void deleteAdmin(Admin admin) throws SQLException {
+    public void deleteAdmin(Admin admin) throws SQLException, IOException {
         this.adminDAO.deleteAdmin(admin);
     }
 
     @Override
-    public void updateAdmin(Admin admin) throws SQLException {
+    public void updateAdmin(Admin admin) throws SQLException, IOException {
         this.adminDAO.updateAdmin(admin);
     }
 
@@ -54,12 +54,12 @@ public class Manager implements LogicInterface {
     }
 
     @Override
-    public void deleteCoordinator(Coordinator coordinator) throws SQLException {
+    public void deleteCoordinator(Coordinator coordinator) throws SQLException, IOException {
         this.coordinatorDAO.deleteCoordinator(coordinator);
     }
 
     @Override
-    public void updateCoordinator(Coordinator coordinator) throws SQLException {
+    public void updateCoordinator(Coordinator coordinator) throws SQLException, IOException {
         this.coordinatorDAO.updateCoordinator(coordinator);
     }
 
@@ -74,12 +74,12 @@ public class Manager implements LogicInterface {
     }
 
     @Override
-    public void deleteEvent(Event event) throws SQLException {
+    public void deleteEvent(Event event) throws SQLException, IOException {
         this.eventDAO.deleteEvent(event);
     }
 
     @Override
-    public void updateEvent(Event event) throws SQLException {
+    public void updateEvent(Event event) throws SQLException, IOException {
         this.eventDAO.updateEvent(event);
     }
 
@@ -94,12 +94,12 @@ public class Manager implements LogicInterface {
     }
 
     @Override
-    public void deleteUser(User user) throws SQLException {
+    public void deleteUser(User user) throws SQLException, IOException {
         this.userDAO.deleteUser(user);
     }
 
     @Override
-    public void updateUser(User user) throws SQLException {
+    public void updateUser(User user) throws SQLException, IOException {
         this.userDAO.updateUser(user);
     }
 
@@ -124,7 +124,7 @@ public class Manager implements LogicInterface {
     }
 
     @Override
-    public Admin getAdminLogIn(String mail, String pass, Admin admin) throws SQLServerException {
+    public Admin getAdminLogIn(String mail, String pass, Admin admin) throws SQLServerException, IOException {
         return this.adminDAO.displayUsers(mail, pass, admin);
     }
 
@@ -135,7 +135,7 @@ public class Manager implements LogicInterface {
 
 
     @Override
-    public List<User> getUsersFromEvents(Event event) throws SQLException {
+    public List<User> getUsersFromEvents(Event event) throws SQLException, IOException {
         return eventUserDAO.getAllUsersForGivenEvent(event);
     }
 

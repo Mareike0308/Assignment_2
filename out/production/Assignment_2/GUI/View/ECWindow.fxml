@@ -8,7 +8,7 @@
 
 <AnchorPane prefHeight="552.0" prefWidth="770.0" style="-fx-background-color: #449DD1;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.ECWindowController">
    <children>
-      <TableView layoutX="203.0" layoutY="52.0" prefHeight="435.0" prefWidth="553.0">
+      <TableView fx:id="userInfoTable" layoutX="199.0" layoutY="52.0" prefHeight="435.0" prefWidth="553.0">
         <columns>
           <TableColumn prefWidth="139.0" text="Name" />
           <TableColumn prefWidth="119.0" text="Email" />
@@ -17,7 +17,7 @@
             <TableColumn prefWidth="93.0" text="Ticket type" />
         </columns>
       </TableView>
-      <TableView layoutX="14.0" layoutY="52.0" prefHeight="435.0" prefWidth="168.0">
+      <TableView fx:id="eventTable" layoutX="14.0" layoutY="52.0" prefHeight="435.0" prefWidth="168.0">
         <columns>
           <TableColumn prefWidth="186.0" text="Event List" />
         </columns>

@@ -41,7 +41,7 @@ public class AdminDAO {
     }
 
 
-    public void updateAdmin(Admin admin) throws SQLException {
+    public void updateAdmin(Admin admin) throws SQLException, IOException {
         Connection con = cm.getConnection();
         String sqlUpdateAdmin = "UPDATE Admins SET AdminEmail=?, AdminPassword=? WHERE ID=?;";
         PreparedStatement psUpdateAdmin = con.prepareStatement(sqlUpdateAdmin, Statement.RETURN_GENERATED_KEYS);
@@ -53,7 +53,7 @@ public class AdminDAO {
     }
 
 
-    public void deleteAdmin(Admin admin) throws SQLException {
+    public void deleteAdmin(Admin admin) throws SQLException, IOException {
         Connection con = cm.getConnection();
         String sqlDeleteAdmin = "DELETE FROM Admins WHERE ID=?;";
         PreparedStatement psDeleteAdmin = con.prepareStatement(sqlDeleteAdmin, Statement.RETURN_GENERATED_KEYS);
@@ -85,7 +85,7 @@ public class AdminDAO {
         }
     }*/
 
-    public Admin displayUsers(String mail, String pass, Admin admin) throws SQLServerException {
+    public Admin displayUsers(String mail, String pass, Admin admin) throws SQLServerException, IOException {
         boolean flag = false;
         Connection con = cm.getConnection();
         try {

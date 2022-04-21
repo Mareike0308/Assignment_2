@@ -20,7 +20,7 @@ public class EventUserDAO {
         }
     }
 
-    public void createEventUser(List<EventUser> list) throws SQLException {
+    public void createEventUser(List<EventUser> list) throws SQLException, IOException {
         Connection con = cm.getConnection();
 
         String sql = "INSERT INTO EventCoord (EventId, CoordId) VALUES (?,?)";
@@ -35,7 +35,7 @@ public class EventUserDAO {
 
     }
 
-    public List<EventUser> getAllEventUser() throws SQLException {
+    public List<EventUser> getAllEventUser() throws SQLException, IOException {
 
         ArrayList<EventUser> eventUser = new ArrayList<>();
         Connection con = cm.getConnection();
@@ -57,7 +57,7 @@ public class EventUserDAO {
     }
 
 
-    public EventUser createEventUser(EventUser eventUser) throws SQLException {
+    public EventUser createEventUser(EventUser eventUser) throws SQLException, IOException {
         EventUser eventUser1 = null;
         Connection con = cm.getConnection();
         String query = "insert into EventUser (EventId,UserId) values(?,?);";
@@ -78,7 +78,7 @@ public class EventUserDAO {
         return eventUser1;
     }
 
-    public List<Event> getEventsFromUser (User User) throws SQLException {
+    public List<Event> getEventsFromUser (User User) throws SQLException, IOException {
         List<Event> eventList = new ArrayList<>();
         Connection con = cm.getConnection();
         String query = "select distinct Event.* from EventUser \n" +
@@ -117,11 +117,11 @@ public class EventUserDAO {
         con.close();
     }*/
 
-    public List<Event> getAllEventsFromUser( User User) throws SQLException {
+    public List<Event> getAllEventsFromUser( User User) throws SQLException, IOException {
         return getEventsFromUser(User);
     }
 
-    public List<User> getAllUsersForGivenEvent(Event event) throws SQLException {
+    public List<User> getAllUsersForGivenEvent(Event event) throws SQLException, IOException {
         List<User> User = new ArrayList<>();
         Connection con = cm.getConnection();
         String query = "select distinct Users.* from EventCoord \n" +
@@ -150,12 +150,12 @@ public class EventUserDAO {
         return User;
     }
 
-    public void addUserToEvent (User user, Event event) throws SQLException {
+    public void addUserToEvent (User user, Event event) throws SQLException, IOException {
         List<User> allUsersForGivenEvent = getAllUsersForGivenEvent(event);
         if (allUsersForGivenEvent.contains(user))return;
         createEventUser(new EventUser(user.getUserId(),event.getEventId()));
     }
-    public void removeUserFromEvent(User user, Event event) throws SQLException {
+    public void removeUserFromEvent(User user, Event event) throws SQLException, IOException {
         Connection con = cm.getConnection();
         PreparedStatement ps = con.prepareStatement("delete from EventUser where UserId=? and EventId=?");
         ps.setInt(1, user.getUserId());

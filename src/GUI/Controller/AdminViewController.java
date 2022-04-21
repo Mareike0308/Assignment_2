@@ -120,14 +120,14 @@ public class AdminViewController {
                 stage.show();
         }
 
-        public void deleteCoordinator(ActionEvent actionEvent) throws SQLException {
+        public void deleteCoordinator(ActionEvent actionEvent) throws SQLException, IOException {
                 Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Delete Coordinator ?", ButtonType.YES, ButtonType.NO, ButtonType.CANCEL);
                 alert.showAndWait();
                 coordinatorModel.deleteCoordinator((Coordinator) coordinatorListTable.getSelectionModel().getSelectedItem());
                 coordinatorListTable.getItems().remove(coordinatorListTable.getSelectionModel().getSelectedItem());
         }
 
-        public void deleteEvent(ActionEvent actionEvent) throws SQLException {
+        public void deleteEvent(ActionEvent actionEvent) throws SQLException, IOException {
                 Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Delete Event ?", ButtonType.YES, ButtonType.NO, ButtonType.CANCEL);
                 alert.showAndWait();
                 eventModel.deleteEvent((Event) eventListTable.getSelectionModel().getSelectedItem());

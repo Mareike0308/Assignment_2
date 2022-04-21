@@ -23,7 +23,7 @@ public class EventCoordDAO {
         }
     }
 
-    public void createEventCoord(List<EventCoord> list) throws SQLException {
+    public void createEventCoord(List<EventCoord> list) throws SQLException, IOException {
         Connection con = cm.getConnection();
 
         String sql = "INSERT INTO EventCoord (EventId, CoordId) VALUES (?,?)";
@@ -38,7 +38,7 @@ public class EventCoordDAO {
 
     }
 
-    public List<EventCoord> getAllEventCoord() throws SQLException {
+    public List<EventCoord> getAllEventCoord() throws SQLException, IOException {
 
         ArrayList<EventCoord> eventCoord = new ArrayList<>();
         Connection con = cm.getConnection();
@@ -60,7 +60,7 @@ public class EventCoordDAO {
     }
 
 
-    public EventCoord createEventCoord(EventCoord eventCoord) throws SQLException {
+    public EventCoord createEventCoord(EventCoord eventCoord) throws SQLException, IOException {
         EventCoord eventCoord1 = null;
         Connection con = cm.getConnection();
         String query = "insert into EventCoord (EventId,CoordId) values(?,?);";
@@ -81,7 +81,7 @@ public class EventCoordDAO {
         return eventCoord1;
     }
 
-    public List<Event> getEventsFromCoordinator (Coordinator coordinator) throws SQLException {
+    public List<Event> getEventsFromCoordinator (Coordinator coordinator) throws SQLException, IOException {
         List<Event> eventList = new ArrayList<>();
         Connection con = cm.getConnection();
         String query = "select distinct Event.* from EventCoord \n" +
@@ -120,11 +120,11 @@ public class EventCoordDAO {
         con.close();
     }*/
 
-    public List<Event> getAllEventsFromCoordinator( Coordinator coordinator) throws SQLException {
+    public List<Event> getAllEventsFromCoordinator( Coordinator coordinator) throws SQLException, IOException {
         return getEventsFromCoordinator(coordinator);
     }
 
-    public List<Coordinator> getAllCoordinatorsForGivenEvent(Event event) throws SQLException {
+    public List<Coordinator> getAllCoordinatorsForGivenEvent(Event event) throws SQLException, IOException {
         List<Coordinator> coordinators = new ArrayList<>();
         Connection con = cm.getConnection();
         String query = "select distinct Coordinators.* from EventCoord \n" +
@@ -151,12 +151,12 @@ public class EventCoordDAO {
         return coordinators;
     }
 
-    public void addCoordinatorToEvent (Coordinator coordinator, Event event) throws SQLException {
+    public void addCoordinatorToEvent (Coordinator coordinator, Event event) throws SQLException, IOException {
         List<Coordinator> allCoordinatorsForGivenEvent = getAllCoordinatorsForGivenEvent(event);
         if (allCoordinatorsForGivenEvent.contains(coordinator))return;
         createEventCoord(new EventCoord(coordinator.getCoordinatorId(),event.getEventId()));
     }
-    public void removeCoordinatorFromEvent(Coordinator coordinator, Event event) throws SQLException {
+    public void removeCoordinatorFromEvent(Coordinator coordinator, Event event) throws SQLException, IOException {
         Connection con = cm.getConnection();
         PreparedStatement ps = con.prepareStatement("delete from EventCoord where CoordId=? and EventId=?");
         ps.setInt(1,coordinator.getCoordinatorId());

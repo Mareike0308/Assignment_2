@@ -63,7 +63,7 @@ public class CoordinatorDAO {
     }
 
 
-    public void updateCoordinator(Coordinator coordinator) throws SQLException {
+    public void updateCoordinator(Coordinator coordinator) throws SQLException, IOException {
         Connection con = cm.getConnection();
         String sqlUpdateCoordinator = "UPDATE Coordinators SET CoordinatorEmail=?, CoordinatorPassword=?,CoordinatorName=? WHERE ID=?;";
         PreparedStatement psUpdateCoordinator = con.prepareStatement(sqlUpdateCoordinator, Statement.RETURN_GENERATED_KEYS);
@@ -76,7 +76,7 @@ public class CoordinatorDAO {
     }
 
 
-    public void deleteCoordinator(Coordinator coordinator) throws SQLException {
+    public void deleteCoordinator(Coordinator coordinator) throws SQLException, IOException {
         Connection con = cm.getConnection();
         String sqlDeleteCoordinator = "DELETE FROM Coordinators WHERE ID=?;";
         PreparedStatement psDeleteCoordinator = con.prepareStatement(sqlDeleteCoordinator, Statement.RETURN_GENERATED_KEYS);

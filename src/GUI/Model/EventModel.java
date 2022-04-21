@@ -20,7 +20,7 @@ public class EventModel {
     }
     Manager manager = new Manager();
 
-    public void deleteEvent(Event selectedItem) throws SQLException {
+    public void deleteEvent(Event selectedItem) throws SQLException, IOException {
         manager.deleteEvent(selectedItem);
     }
 

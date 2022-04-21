@@ -48,7 +48,7 @@ public class UserDAO {
 
 
 
-    public List<User> getAllUsers() throws SQLException {
+    public List<User> getAllUsers() throws SQLException, IOException {
         List<User> allUsers = new ArrayList<>();
        try (Connection con = cm.getConnection()) {
             String sqlSelectUser= "SELECT * FROM Users";
@@ -69,7 +69,7 @@ public class UserDAO {
     }
 
 
-    public void updateUser(User user) throws SQLException {
+    public void updateUser(User user) throws SQLException, IOException {
         Connection con = cm.getConnection();
         String sqlUpdateUser = "UPDATE  Users SET UserName=?, UserEmail=?,UserPhoneNumber=?,UserAmountOfTickets=?, UserTicket=? WHERE ID=?;";
         PreparedStatement psUpdateUser = con.prepareStatement(sqlUpdateUser, Statement.RETURN_GENERATED_KEYS);
@@ -83,7 +83,7 @@ public class UserDAO {
         con.close();
     }
 
-    public void deleteUser(User user) throws SQLException {
+    public void deleteUser(User user) throws SQLException, IOException {
         Connection con = cm.getConnection();
         String sqlDeleteUser = "DELETE FROM Users WHERE ID=?;";
         PreparedStatement psDeleteUser = con.prepareStatement(sqlDeleteUser, Statement.RETURN_GENERATED_KEYS);

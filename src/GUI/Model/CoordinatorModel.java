@@ -37,7 +37,7 @@ public class CoordinatorModel {
         return this.getAllCoordinators;
     }
 
-    public void deleteCoordinator(Coordinator selectedItem) throws SQLException {
+    public void deleteCoordinator(Coordinator selectedItem) throws SQLException, IOException {
         manager.deleteCoordinator(selectedItem);
     }
 

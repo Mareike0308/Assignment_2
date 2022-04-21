@@ -11,6 +11,7 @@ import java.util.Properties;
 
 public class ConnectionManager {
     private final SQLServerDataSource ds;
+    private static ConnectionManager instance;
 
     public ConnectionManager() throws IOException
     {
@@ -22,9 +23,12 @@ public class ConnectionManager {
         ds.setPassword("CSe21B_9");
     }
 
-    public Connection getConnection() throws SQLServerException
-    {
-        return ds.getConnection();
+    public static ConnectionManager getInstance() throws IOException {
+        return instance == null ? instance = new ConnectionManager() : instance;
+    }
+
+    public static Connection getConnection() throws SQLServerException, IOException {
+        return getInstance().ds.getConnection();
     }
     public static void main (String[] args) throws SQLException, IOException {
         ConnectionManager ds = new ConnectionManager();
