@@ -6,10 +6,10 @@
 
 <AnchorPane prefHeight="195.0" prefWidth="349.0" style="-fx-background-color: #449DD1;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.NewAdminController">
    <children>
-      <TextField layoutX="87.0" layoutY="38.0" promptText="Email" />
-      <TextField layoutX="87.0" layoutY="69.0" promptText="Password" />
-      <Button layoutX="210.0" layoutY="156.0" mnemonicParsing="false" style="-fx-background-radius: 25;" text="Accept" />
-      <Button layoutX="276.0" layoutY="156.0" mnemonicParsing="false" style="-fx-background-radius: 25;" text="Cancel" />
-      <TextField layoutX="87.0" layoutY="107.0" promptText="Password confirmation" />
+      <TextField fx:id="newAdminEmail_txt" layoutX="87.0" layoutY="38.0" promptText="Email" />
+      <TextField fx:id="newAdminPass_txt" layoutX="87.0" layoutY="69.0" promptText="Password" />
+      <Button fx:id="saveNewAdminBTN" layoutX="210.0" layoutY="156.0" mnemonicParsing="false" onAction="#saveNewAdmin" style="-fx-background-radius: 25;" text="Accept" />
+      <Button fx:id="cancelAdminBTN" layoutX="276.0" layoutY="156.0" mnemonicParsing="false" onAction="#cancelAddingAdmin" style="-fx-background-radius: 25;" text="Cancel" />
+      <TextField fx:id="newAdminPassConfirmation_txt" layoutX="87.0" layoutY="107.0" promptText="Password confirmation" />
    </children>
 </AnchorPane>
