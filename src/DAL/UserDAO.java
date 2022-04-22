@@ -46,34 +46,30 @@ public class UserDAO {
 
     }
 
-   /* public List<User> getAllUsers() throws SQLException {
-        List<User> userList = new ArrayList<>();
-        Connection con = cm.getConnection();
-        String sqlSelectUser = "\n" +
-                "select user .id,userName,userEmail,userPhoneNumber,userAmountofTickets,userTicket" +
-                "GROUP by user.id,userName,userEmail,userPhoneNumber,userAmountofTickets,userTicket\n;";
-        PreparedStatement psSelectUser = con.prepareStatement(sqlSelectUser);
-        ResultSet rs = psSelectUser.executeQuery();
 
-        while (rs.next()) {
-            String title = rs.getString("title");
-            Double userRating = rs.getDouble("userRating");
-            double IMBDrating = rs.getDouble("imdbRating");
-            Date lastView = rs.getDate("lastview");
-            String movieUrl = rs.getString("fileLink");
-            int Id = rs.getInt("id");
-            Movie movie = new Movie(title, userRating, IMBDrating, lastView, movieUrl, Id);
-            movie.setCategory(rs.getString("categories"));
-            movieList.add(movie);
+
+    public List<User> getAllUsers() throws SQLException, IOException {
+        List<User> allUsers = new ArrayList<>();
+       try (Connection con = cm.getConnection()) {
+            String sqlSelectUser= "SELECT * FROM Users";
+            PreparedStatement psSelectUser = con.prepareStatement(sqlSelectUser);
+            ResultSet rs = psSelectUser.executeQuery();
+         while (rs.next()) {
+                allUsers.add(new User(
+                        rs.getString("UserName"),
+                        rs.getString("UserEmail"),
+                        rs.getInt("UserPhoneNumber"),
+                        rs.getInt("UserAmountOfTickets"),
+                        rs.getString("UserTicket"),
+                        rs.getInt("UserId"))
+                );
+            }
         }
-        rs.close();
-        pstStatementSelectMovie.close();
-        con.close();
+        return allUsers;
+    }
 
-        return movieList;
-    }*/
 
-    public void updateUser(User user) throws SQLException {
+    public void updateUser(User user) throws SQLException, IOException {
         Connection con = cm.getConnection();
         String sqlUpdateUser = "UPDATE  Users SET UserName=?, UserEmail=?,UserPhoneNumber=?,UserAmountOfTickets=?, UserTicket=? WHERE ID=?;";
         PreparedStatement psUpdateUser = con.prepareStatement(sqlUpdateUser, Statement.RETURN_GENERATED_KEYS);
@@ -87,7 +83,7 @@ public class UserDAO {
         con.close();
     }
 
-    public void deleteUser(User user) throws SQLException {
+    public void deleteUser(User user) throws SQLException, IOException {
         Connection con = cm.getConnection();
         String sqlDeleteUser = "DELETE FROM Users WHERE ID=?;";
         PreparedStatement psDeleteUser = con.prepareStatement(sqlDeleteUser, Statement.RETURN_GENERATED_KEYS);

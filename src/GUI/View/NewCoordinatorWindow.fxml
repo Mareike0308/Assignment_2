@@ -4,13 +4,13 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="222.0" prefWidth="359.0" style="-fx-background-color: #449DD1;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.NewAdminController">
+<AnchorPane prefHeight="222.0" prefWidth="359.0" style="-fx-background-color: #449DD1;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.NewCoordinatorController">
    <children>
-      <TextField layoutX="70.0" layoutY="39.0" prefHeight="25.0" prefWidth="202.0" promptText="Name" />
-      <TextField layoutX="70.0" layoutY="71.0" prefHeight="25.0" prefWidth="202.0" promptText="Email" />
-      <Button layoutX="233.0" layoutY="183.0" mnemonicParsing="false" style="-fx-background-radius: 25;" text="Accept" />
-      <Button layoutX="293.0" layoutY="183.0" mnemonicParsing="false" style="-fx-background-radius: 25;" text="Cancel" />
-      <TextField layoutX="70.0" layoutY="103.0" prefHeight="25.0" prefWidth="202.0" promptText="Password" />
-      <TextField layoutX="70.0" layoutY="141.0" prefHeight="25.0" prefWidth="202.0" promptText="Password confirmation" />
+      <TextField fx:id="newCoordName_txt" layoutX="70.0" layoutY="39.0" prefHeight="25.0" prefWidth="202.0" promptText="Name" />
+      <TextField fx:id="newCoordEmail_txt" layoutX="70.0" layoutY="71.0" prefHeight="25.0" prefWidth="202.0" promptText="Email" />
+      <Button fx:id="saveNewCoordinatorBTN" layoutX="233.0" layoutY="183.0" mnemonicParsing="false" onAction="#saveNewCoordinator" style="-fx-background-radius: 25;" text="Accept" />
+      <Button fx:id="cancelCoordBTN" layoutX="293.0" layoutY="183.0" mnemonicParsing="false" onAction="#cancelAddingCoord" style="-fx-background-radius: 25;" text="Cancel" />
+      <TextField fx:id="newCoordPassword_txt" layoutX="70.0" layoutY="103.0" prefHeight="25.0" prefWidth="202.0" promptText="Password" />
+      <TextField fx:id="newCoordPassConfirmation_txt" layoutX="70.0" layoutY="141.0" prefHeight="25.0" prefWidth="202.0" promptText="Password confirmation" />
    </children>
 </AnchorPane>

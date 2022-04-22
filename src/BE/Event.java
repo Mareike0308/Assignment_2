@@ -1,5 +1,7 @@
 package BE;
 
+import javafx.scene.image.Image;
+
 public class Event {
 
     private String eventName;
@@ -7,6 +9,7 @@ public class Event {
     private String eventPlace;
     private String eventStartEnding;
     private String eventInfo;
+    private Image eventImg;
     private int eventId;
 
     public Event (String eventName, String eventDate, String eventPlace, String eventStartEnding, String eventInfo,int eventId) {
@@ -15,6 +18,7 @@ public class Event {
         this.eventPlace = eventPlace ;
         this.eventStartEnding = eventStartEnding ;
         this.eventInfo = eventInfo ;
+        this.eventImg = eventImg;
         this.eventId = eventId ;
     }
 
@@ -30,4 +34,6 @@ public class Event {
     public void setEventInfo(String eventInfo) {this.eventInfo = eventInfo;}
     public int getEventId() {return eventId;}
     public void setEventId(int eventId) {this.eventId = eventId;}
+    public Image getEventImg() {return eventImg;}
+    public void setEventImg(Image eventImg) {this.eventImg = eventImg;}
 }

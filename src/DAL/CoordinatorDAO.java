@@ -3,6 +3,8 @@ package DAL;
 import BE.Coordinator;
 import java.io.IOException;
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class CoordinatorDAO {
 
@@ -12,6 +14,27 @@ public class CoordinatorDAO {
     public CoordinatorDAO() throws IOException {
         cm = new ConnectionManager();
     }
+
+
+    public List<Coordinator> getAllCoordinators() throws Exception {
+        List<Coordinator> allCoordinators = new ArrayList<>();
+        try (Connection con = cm.getConnection()) {
+            String sqlSelectCoordinator= "SELECT * FROM Coordinators";
+            PreparedStatement psSelectCoordinator = con.prepareStatement(sqlSelectCoordinator);
+            ResultSet rs = psSelectCoordinator.executeQuery();
+            while (rs.next()) {
+                allCoordinators.add(new Coordinator(
+                        rs.getString("CoordinatorEmail"),
+                        rs.getString("CoordinatorPassword"),
+                        rs.getString("CoordinatorName"),
+                        rs.getInt("CoordinatorId"))
+                );
+            }
+        }
+        return allCoordinators;
+    }
+
+
 
     public Coordinator createCoordinator(Coordinator coordinator) throws Exception {
         Coordinator coordinatorCreated = null;
@@ -40,7 +63,7 @@ public class CoordinatorDAO {
     }
 
 
-    public void updateCoordinator(Coordinator coordinator) throws SQLException {
+    public void updateCoordinator(Coordinator coordinator) throws SQLException, IOException {
         Connection con = cm.getConnection();
         String sqlUpdateCoordinator = "UPDATE Coordinators SET CoordinatorEmail=?, CoordinatorPassword=?,CoordinatorName=? WHERE ID=?;";
         PreparedStatement psUpdateCoordinator = con.prepareStatement(sqlUpdateCoordinator, Statement.RETURN_GENERATED_KEYS);
@@ -53,7 +76,7 @@ public class CoordinatorDAO {
     }
 
 
-    public void deleteCoordinator(Coordinator coordinator) throws SQLException {
+    public void deleteCoordinator(Coordinator coordinator) throws SQLException, IOException {
         Connection con = cm.getConnection();
         String sqlDeleteCoordinator = "DELETE FROM Coordinators WHERE ID=?;";
         PreparedStatement psDeleteCoordinator = con.prepareStatement(sqlDeleteCoordinator, Statement.RETURN_GENERATED_KEYS);
